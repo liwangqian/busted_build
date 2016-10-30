@@ -1,5 +1,5 @@
 
-mingw32-make mingw
+%MAKE% %PLAT%
 
 set SUB_SYS=term
 mkdir %LUA_BIN%\%SUB_SYS% %LUA_LUA%\%SUB_SYS%

@@ -4,6 +4,8 @@
 REM "用户参数配置区BEG"
 set LUA_VER=5.1
 set LUA_ROOT=E:\Lua
+set MAKE=mingw32-make
+set PLAT=mingw
 REM "参数配置区END"
 
 set LUA_BIN=%LUA_ROOT%\%LUA_VER%

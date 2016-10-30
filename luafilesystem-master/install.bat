@@ -1,5 +1,5 @@
 cd .\src
-mingw32-make mingw
+%MAKE% %PLAT%
 cd ..
 
 copy .\src\*.dll    	%LUA_BIN%
