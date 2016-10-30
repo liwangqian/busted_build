@@ -1,0 +1,29 @@
+language: c
+
+env:
+  global:
+    - LUAROCKS=2.3.0
+  matrix:
+    - LUA=lua5.1
+    - LUA=lua5.2
+    - LUA=lua5.3
+    - LUA=luajit
+    - LUA=luajit2.0
+    - LUA=luajit2.1
+
+before_install:
+  - source .travis/setenv_lua.sh
+  - luarocks install luasec
+  - luarocks install moonscript
+
+install:
+  - luarocks make busted-scm-0.rockspec
+
+script: busted
+
+branches:
+  except:
+    - gh-pages
+
+notifications:
+  slack: olivinelabs:ZFLBu3JQfLAlTn7eNeh7rott

@@ -1,0 +1,45 @@
+language: erlang
+
+env:
+  - LUA="Lua 5.1"
+  - LUA="Lua 5.2"
+  - LUA="Lua 5.3"
+  - LUA="LuaJIT 2.0"
+
+branches:
+  only:
+    - master
+
+before_install:
+  - bash .travis_setup.sh
+
+install:
+  - sudo luarocks install luafilesystem
+  - git clone git://github.com/Olivine-Labs/say.git
+  - cd say
+  - sudo luarocks make
+  - cd ../
+  - git clone git://github.com/Olivine-Labs/luassert.git
+  - cd luassert
+  - sudo luarocks make
+  - cd ../
+  - git clone git://github.com/Olivine-Labs/busted.git
+  - cd busted
+  - sudo luarocks make busted-scm-0.rockspec
+  - cd ../
+  - git clone git://github.com/Olivine-Labs/mediator_lua.git
+  - cd mediator_lua
+  - sudo luarocks make
+  - cd ../
+
+script: "busted spec"
+
+notifications:
+  webhooks:
+    - http://hollow-mountain-1250.herokuapp.com/hubot/travis
+  recipients:
+    - engineers@olivinelabs.com
+  email:
+    on_success: always
+    on_failure: always
+
