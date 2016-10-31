@@ -4,10 +4,6 @@
 # environment.
 #
 
-# PLAT: linux macosx win32 mingw freebsd
-# platform to build for
-PLAT?=mingw
-
 # LUA_VERSION: 5.1 5.2 5.3
 # lua version to build against
 LUA_VERSION?=$(LUA_VER)
@@ -18,16 +14,28 @@ MYCFLAGS=
 # MYLDFLAGS: to be set by user if needed
 MYLDFLAGS=
 
+# LUAINC_linux:
+# /usr/include/lua$(LUA_VERSION)
+# /usr/local/include
+# /usr/local/include/lua$(LUA_VERSION)
+# where lua headers are found for linux builds
+LUAINC_linux_base?=/usr/include
+LUAINC_linux?=$(LUAINC_linux_base)/lua/$(LUA_VERSION)
+LUAPREFIX_linux?=/usr/local
+CDIR_linux?=lib/lua/$(LUA_VERSION)
+LDIR_linux?=share/lua/$(LUA_VERSION)
+
 # where lua headers are found for mingw builds
 # LUAINC_mingw:
 # /opt/local/include
-LUAINC_mingw_base?=E:\Lua
+LUAINC_mingw_base?=$(LUA_ROOT)
 LUAINC_mingw?=$(LUAINC_mingw_base)/$(LUA_VERSION)/include
-LUALIB_mingw_base?=E:\Lua
+LUALIB_mingw_base?=$(LUA_ROOT)
 LUALIB_mingw?=$(LUALIB_mingw_base)/$(LUA_VERSION)/lua$(subst .,,$(LUA_VERSION)).dll
-LUAPREFIX_mingw?=E:\Lua
+LUAPREFIX_mingw?=$(LUA_ROOT)
 CDIR_mingw?=lua/$(LUA_VERSION)
 LDIR_mingw?=lua/$(LUA_VERSION)/lua
+
 
 # prefix: /usr/local /usr /opt/local /sw
 # the top of the default install tree
@@ -46,36 +54,9 @@ DESTDIR=
 
 
 #------
-# Install directories
-#
-
-INSTALL_DIR=install -d
-INSTALL_DATA=install -m644
-INSTALL_EXEC=install
-INSTALL_TOP=$(DESTDIR)$(prefix)
-
-INSTALL_TOP_LDIR=$(INSTALL_TOP)/$(LDIR)
-INSTALL_TOP_CDIR=$(INSTALL_TOP)/$(CDIR)
-
-INSTALL_LDIR=$(INSTALL_TOP_LDIR)/term
-INSTALL_CDIR=$(INSTALL_TOP_CDIR)/term
-
-#------
 # Supported platforms
 #
-PLATS= macosx linux win32 mingw
-
-#------
-# Compiler and linker settings
-# for Mac OS X
-SO_macosx=so
-O_macosx=o
-CC_macosx=gcc
-DEF_macosx=
-CFLAGS_macosx= -I$(LUAINC) $(DEF) -Wall -O2 -fno-common \
-	-fvisibility=hidden
-LDFLAGS_macosx= -bundle -undefined dynamic_lookup -o
-LD_macosx= export MACOSX_DEPLOYMENT_TARGET="10.3"; gcc
+PLATS= linux mingw
 
 #------
 # Compiler and linker settings
@@ -91,18 +72,6 @@ LD_linux=gcc
 
 #------
 # Compiler and linker settings
-# for FreeBSD
-SO_freebsd=so
-O_freebsd=o
-CC_freebsd=gcc
-DEF_freebsd=
-CFLAGS_freebsd= -I$(LUAINC) $(DEF) -Wall -Wshadow -Wextra \
-	-Wimplicit -O2 -ggdb3 -fpic -fvisibility=hidden
-LDFLAGS_freebsd=-O -shared -fpic -o
-LD_freebsd=gcc
-
-#------
-# Compiler and linker settings
 # for MingW
 SO_mingw=dll
 O_mingw=o
@@ -113,24 +82,6 @@ CFLAGS_mingw= -I$(LUAINC) $(DEF) -Wall -O2 -fno-common \
 LDFLAGS_mingw= $(LUALIB) -shared -Wl,-s -o
 LD_mingw=gcc
 
-
-#------
-# Compiler and linker settings
-# for Win32
-SO_win32=dll
-O_win32=obj
-CC_win32=cl
-DEF_win32= //D "WIN32" //D "NDEBUG" //D "_WINDOWS" //D "_USRDLL" \
-     //D "_CRT_SECURE_NO_WARNINGS" //D "_WINDLL" \
-     //D"WINVER=0x0600" //D"_WIN32_WINNT=0x0600"
-CFLAGS_win32=//I "$(LUAINC)" $(DEF) //O2 //Ot //MD //W3 //nologo
-LDFLAGS_win32= //nologo //link //NOLOGO //DLL //INCREMENTAL:NO \
-    //MANIFEST //MANIFESTFILE:"intermediate.manifest" \
-    //MANIFESTUAC:"level='asInvoker' uiAccess='false'" \
-	//SUBSYSTEM:WINDOWS //OPT:REF //OPT:ICF //DYNAMICBASE:NO \
-    //MACHINE:X86 /LIBPATH:"$(shell cmd //c echo $(LUALIB))" \
-	$(LUALIBNAME_win32) //OUT:
-LD_win32=cl
 
 .SUFFIXES: .obj
 
@@ -163,8 +114,19 @@ OBJS=core.$(O)
 #------
 # Targets
 #
+default: $(PLAT)
+
+linux:
+	$(MAKE) all PLAT=linux
+
 mingw:
 	$(MAKE) all PLAT=mingw
+
+none:
+	@echo "Please run"
+	@echo "   make PLATFORM"
+	@echo "where PLATFORM is one of these:"
+	@echo "   $(PLATS)"
 
 all: $(SOLIB)
 
@@ -172,15 +134,6 @@ $(SOLIB): $(OBJS)
 	$(LD) $(OBJS) $(LDFLAGS)$@
 
 clean:
-	rm -f $(SOLIB) $(OBJS) 
-
-print:
-	@echo PLAT=$(PLAT)
-	@echo LUA_VERSION=$(LUA_VERSION)
-	@echo prefix=$(prefix)
-	@echo LUAINC_$(PLAT)=$(LUAINC_$(PLAT))
-	@echo LUALIB_$(PLAT)=$(LUALIB_$(PLAT))
-	@echo INSTALL_TOP_CDIR=$(INSTALL_TOP_CDIR)
-	@echo INSTALL_TOP_LDIR=$(INSTALL_TOP_LDIR)
+	rm -f $(SOLIB) $(OBJS)
 
 .PHONY: all $(PLATS) default clean none
