@@ -1,5 +1,5 @@
 # busted_build
-  <b>busted install guide for linux and windows manually
+  <b>busted install guide for linux and windows manually</b>
 
 
 ## install in windows
@@ -16,5 +16,5 @@
 
 ## test the busted
   1) edit the <b>test_busted.bat</b> to config the installation root path.
-  
+
   2) run the <b>test_busted.bat</b>.
