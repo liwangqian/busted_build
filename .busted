@@ -5,6 +5,6 @@ return {
   default = {
     coverage = false,
     verbose = true,
-    lpath = "spec/?.lua;"..package.path
+    lpath = "spec/?.lua;"..package.path,	-- for cliargs tests
   }
 }

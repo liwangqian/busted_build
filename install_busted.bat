@@ -39,4 +39,7 @@ for /f "delims=" %%i in (' dir /ad /b ') do (
 	)
 )
 
+REM "拷贝busted测试用例的配置文件"
+copy %BUILD_ROOT%\.busted %LUA_ROOT%
+
 pause

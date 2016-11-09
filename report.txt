@@ -32,7 +32,7 @@
 [ RUN      ] spec\assertions_spec.lua @ 179: Test Assertions Checks near() assertion handles tolerances
 [       OK ] spec\assertions_spec.lua @ 179: Test Assertions Checks near() assertion handles tolerances (0.00 ms)
 [ RUN      ] spec\assertions_spec.lua @ 191: Test Assertions Checks matches() assertion does string matching
-[       OK ] spec\assertions_spec.lua @ 191: Test Assertions Checks matches() assertion does string matching (0.00 ms)
+[       OK ] spec\assertions_spec.lua @ 191: Test Assertions Checks matches() assertion does string matching (16.00 ms)
 [ RUN      ] spec\assertions_spec.lua @ 205: Test Assertions Ensures the is operator doesn't change the behavior of equals
 [       OK ] spec\assertions_spec.lua @ 205: Test Assertions Ensures the is operator doesn't change the behavior of equals (0.00 ms)
 [ RUN      ] spec\assertions_spec.lua @ 209: Test Assertions Ensures the is_not operator does change the behavior of equals
@@ -50,7 +50,7 @@
 [ RUN      ] spec\assertions_spec.lua @ 252: Test Assertions Checks false() assertion
 [       OK ] spec\assertions_spec.lua @ 252: Test Assertions Checks false() assertion (0.00 ms)
 [ RUN      ] spec\assertions_spec.lua @ 261: Test Assertions Checks boolean() assertion
-[       OK ] spec\assertions_spec.lua @ 261: Test Assertions Checks boolean() assertion (16.00 ms)
+[       OK ] spec\assertions_spec.lua @ 261: Test Assertions Checks boolean() assertion (0.00 ms)
 [ RUN      ] spec\assertions_spec.lua @ 270: Test Assertions Checks number() assertion
 [       OK ] spec\assertions_spec.lua @ 270: Test Assertions Checks number() assertion (0.00 ms)
 [ RUN      ] spec\assertions_spec.lua @ 279: Test Assertions Checks string() assertion
@@ -119,13 +119,21 @@ Passed in:
 (number) 0
 Expected:
 (number) 8
-[  FAILED  ] spec\cl_spec.lua @ 40: Tests the busted command-line options tests running with --tags specified (110.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:43: in function <spec\cl_spec.lua:40>
+
+[  FAILED  ] spec\cl_spec.lua @ 40: Tests the busted command-line options tests running with --tags specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 55: Tests the busted command-line options tests running with --exclude-tags specified
 spec\cl_spec.lua:57: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:57: in function <spec\cl_spec.lua:55>
+
 [  FAILED  ] spec\cl_spec.lua @ 55: Tests the busted command-line options tests running with --exclude-tags specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 67: Tests the busted command-line options tests running with --tags and --exclude-tags specified
 [       OK ] spec\cl_spec.lua @ 67: Tests the busted command-line options tests running with --tags and --exclude-tags specified (156.00 ms)
@@ -135,6 +143,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 5
+
+stack traceback:
+	spec\cl_spec.lua:77: in function <spec\cl_spec.lua:74>
+
 [  FAILED  ] spec\cl_spec.lua @ 74: Tests the busted command-line options tests running with --tags specified in describe (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 83: Tests the busted command-line options tests running with --exclude-pattern specified
 spec\cl_spec.lua:86: Expected objects to be equal.
@@ -142,6 +154,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 4
+
+stack traceback:
+	spec\cl_spec.lua:86: in function <spec\cl_spec.lua:83>
+
 [  FAILED  ] spec\cl_spec.lua @ 83: Tests the busted command-line options tests running with --exclude-pattern specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 89: Tests the busted command-line options tests running with --exclude-pattern="" disables exclude-pattern
 spec\cl_spec.lua:92: Expected objects to be equal.
@@ -149,6 +165,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 2
+
+stack traceback:
+	spec\cl_spec.lua:92: in function <spec\cl_spec.lua:89>
+
 [  FAILED  ] spec\cl_spec.lua @ 89: Tests the busted command-line options tests running with --exclude-pattern="" disables exclude-pattern (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 97: Tests the busted command-line options tests running with the same --pattern and --exclude-pattern specified
 spec\cl_spec.lua:100: Expected objects to be equal.
@@ -156,13 +176,21 @@ Passed in:
 (number) 0
 Expected:
 (number) 1
-[  FAILED  ] spec\cl_spec.lua @ 97: Tests the busted command-line options tests running with the same --pattern and --exclude-pattern specified (93.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:100: in function <spec\cl_spec.lua:97>
+
+[  FAILED  ] spec\cl_spec.lua @ 97: Tests the busted command-line options tests running with the same --pattern and --exclude-pattern specified (94.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 103: Tests the busted command-line options tests running with --filter specified
 spec\cl_spec.lua:106: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 8
+
+stack traceback:
+	spec\cl_spec.lua:106: in function <spec\cl_spec.lua:103>
+
 [  FAILED  ] spec\cl_spec.lua @ 103: Tests the busted command-line options tests running with --filter specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 118: Tests the busted command-line options tests running with --filter-out specified
 spec\cl_spec.lua:121: Expected objects to be equal.
@@ -170,20 +198,32 @@ Passed in:
 (number) 0
 Expected:
 (number) 6
-[  FAILED  ] spec\cl_spec.lua @ 118: Tests the busted command-line options tests running with --filter-out specified (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:121: in function <spec\cl_spec.lua:118>
+
+[  FAILED  ] spec\cl_spec.lua @ 118: Tests the busted command-line options tests running with --filter-out specified (62.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 132: Tests the busted command-line options tests running with --filter and --filter-out specified
 spec\cl_spec.lua:134: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 132: Tests the busted command-line options tests running with --filter and --filter-out specified (94.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:134: in function <spec\cl_spec.lua:132>
+
+[  FAILED  ] spec\cl_spec.lua @ 132: Tests the busted command-line options tests running with --filter and --filter-out specified (187.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 137: Tests the busted command-line options tests running with --filter specified in describe
 spec\cl_spec.lua:140: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 5
+
+stack traceback:
+	spec\cl_spec.lua:140: in function <spec\cl_spec.lua:137>
+
 [  FAILED  ] spec\cl_spec.lua @ 137: Tests the busted command-line options tests running with --filter specified in describe (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 146: Tests the busted command-line options tests running with --lazy specified
 spec\cl_spec.lua:149: Expected objects to be equal.
@@ -191,7 +231,11 @@ Passed in:
 (number) 0
 Expected:
 (number) 7
-[  FAILED  ] spec\cl_spec.lua @ 146: Tests the busted command-line options tests running with --lazy specified (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:149: in function <spec\cl_spec.lua:146>
+
+[  FAILED  ] spec\cl_spec.lua @ 146: Tests the busted command-line options tests running with --lazy specified (63.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 161: Tests the busted command-line options tests running with -l specified
 spec\cl_spec.lua:166: Expected objects to be equal.
 Passed in:
@@ -201,6 +245,10 @@ Expected:
 spec\cl_list.lua:7: Tests list test 2
 spec\cl_list.lua:10: Tests list test 3
 '
+
+stack traceback:
+	spec\cl_spec.lua:166: in function <spec\cl_spec.lua:161>
+
 [  FAILED  ] spec\cl_spec.lua @ 161: Tests the busted command-line options tests running with -l specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 169: Tests the busted command-line options tests running with --list specified
 spec\cl_spec.lua:174: Expected objects to be equal.
@@ -211,6 +259,10 @@ Expected:
 spec\cl_list.lua:7: Tests list test 2
 spec\cl_list.lua:10: Tests list test 3
 '
+
+stack traceback:
+	spec\cl_spec.lua:174: in function <spec\cl_spec.lua:169>
+
 [  FAILED  ] spec\cl_spec.lua @ 169: Tests the busted command-line options tests running with --list specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 177: Tests the busted command-line options tests running with --lpath specified
 spec\cl_spec.lua:179: Expected objects to be the same.
@@ -218,6 +270,10 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:179: in function <spec\cl_spec.lua:177>
+
 [  FAILED  ] spec\cl_spec.lua @ 177: Tests the busted command-line options tests running with --lpath specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 183: Tests the busted command-line options tests running with --lang specified
 spec\cl_spec.lua:185: Expected objects to be the same.
@@ -225,6 +281,10 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:185: in function <spec\cl_spec.lua:183>
+
 [  FAILED  ] spec\cl_spec.lua @ 183: Tests the busted command-line options tests running with --lang specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 191: Tests the busted command-line options tests running with --version specified
 spec\cl_spec.lua:193: Expected objects to be the same.
@@ -232,15 +292,23 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:193: in function <spec\cl_spec.lua:191>
+
 [  FAILED  ] spec\cl_spec.lua @ 191: Tests the busted command-line options tests running with --version specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 197: Tests the busted command-line options tests running with --help specified
-[       OK ] spec\cl_spec.lua @ 197: Tests the busted command-line options tests running with --help specified (62.00 ms)
+[       OK ] spec\cl_spec.lua @ 197: Tests the busted command-line options tests running with --help specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 202: Tests the busted command-line options tests running a non-compiling testfile
 spec\cl_spec.lua:205: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 1
+
+stack traceback:
+	spec\cl_spec.lua:205: in function <spec\cl_spec.lua:202>
+
 [  FAILED  ] spec\cl_spec.lua @ 202: Tests the busted command-line options tests running a non-compiling testfile (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 208: Tests the busted command-line options tests running a testfile throwing errors when being run
 spec\cl_spec.lua:211: Expected objects to be equal.
@@ -248,13 +316,21 @@ Passed in:
 (number) 0
 Expected:
 (number) 1
-[  FAILED  ] spec\cl_spec.lua @ 208: Tests the busted command-line options tests running a testfile throwing errors when being run (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:211: in function <spec\cl_spec.lua:208>
+
+[  FAILED  ] spec\cl_spec.lua @ 208: Tests the busted command-line options tests running a testfile throwing errors when being run (62.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 214: Tests the busted command-line options tests running with --output specified
 spec\cl_spec.lua:216: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:216: in function <spec\cl_spec.lua:214>
+
 [  FAILED  ] spec\cl_spec.lua @ 214: Tests the busted command-line options tests running with --output specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 223: Tests the busted command-line options tests running with --output specified with module in lua path
 spec\cl_spec.lua:225: Expected objects to be the same.
@@ -262,15 +338,23 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:225: in function <spec\cl_spec.lua:223>
+
 [  FAILED  ] spec\cl_spec.lua @ 223: Tests the busted command-line options tests running with --output specified with module in lua path (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 229: Tests the busted command-line options tests no tests to exit with a fail-exitcode
-[       OK ] spec\cl_spec.lua @ 229: Tests the busted command-line options tests no tests to exit with a fail-exitcode (63.00 ms)
+[       OK ] spec\cl_spec.lua @ 229: Tests the busted command-line options tests no tests to exit with a fail-exitcode (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 235: Tests the busted command-line options can switch interpreters
 spec\cl_spec.lua:238: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:238: in function <spec\cl_spec.lua:235>
+
 [  FAILED  ] spec\cl_spec.lua @ 235: Tests the busted command-line options can switch interpreters (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 245: Tests failing tests through the commandline tests failing setup/before_each/after_each/teardown functions
 spec\cl_spec.lua:248: Expected objects to be equal.
@@ -278,6 +362,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 16
+
+stack traceback:
+	spec\cl_spec.lua:248: in function <spec\cl_spec.lua:245>
+
 [  FAILED  ] spec\cl_spec.lua @ 245: Tests failing tests through the commandline tests failing setup/before_each/after_each/teardown functions (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 251: Tests failing tests through the commandline tests failing support functions as errors
 spec\cl_spec.lua:254: Expected objects to be equal.
@@ -285,39 +373,59 @@ Passed in:
 (number) 0
 Expected:
 (number) 16
+
+stack traceback:
+	spec\cl_spec.lua:254: in function <spec\cl_spec.lua:251>
+
 [  FAILED  ] spec\cl_spec.lua @ 251: Tests failing tests through the commandline tests failing support functions as errors (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 259: Test busted running standalone tests running with --tags specified
-[       OK ] spec\cl_spec.lua @ 259: Test busted running standalone tests running with --tags specified (327.00 ms)
+[       OK ] spec\cl_spec.lua @ 259: Test busted running standalone tests running with --tags specified (328.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 271: Test busted running standalone tests running with --exclude-tags specified
-[       OK ] spec\cl_spec.lua @ 271: Test busted running standalone tests running with --exclude-tags specified (218.00 ms)
+[       OK ] spec\cl_spec.lua @ 271: Test busted running standalone tests running with --exclude-tags specified (234.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 280: Test busted running standalone tests running with --tags and --exclude-tags specified
-[       OK ] spec\cl_spec.lua @ 280: Test busted running standalone tests running with --tags and --exclude-tags specified (219.00 ms)
+[       OK ] spec\cl_spec.lua @ 280: Test busted running standalone tests running with --tags and --exclude-tags specified (203.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 287: Test busted running standalone tests running with --helper specified
-[       OK ] spec\cl_spec.lua @ 287: Test busted running standalone tests running with --helper specified (109.00 ms)
+[       OK ] spec\cl_spec.lua @ 287: Test busted running standalone tests running with --helper specified (124.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 293: Test busted running standalone tests running with --version specified
-[       OK ] spec\cl_spec.lua @ 293: Test busted running standalone tests running with --version specified (109.00 ms)
+[       OK ] spec\cl_spec.lua @ 293: Test busted running standalone tests running with --version specified (110.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 299: Test busted running standalone tests running with --help specified
 [       OK ] spec\cl_spec.lua @ 299: Test busted running standalone tests running with --help specified (109.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 304: Test busted running standalone tests running via stdin
-[       OK ] spec\cl_spec.lua @ 304: Test busted running standalone tests running via stdin (110.00 ms)
+[       OK ] spec\cl_spec.lua @ 304: Test busted running standalone tests running via stdin (125.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 312: Test busted command-line runner runs standalone spec
 spec\cl_spec.lua:315: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 3
+
+stack traceback:
+	spec\cl_spec.lua:315: in function <spec\cl_spec.lua:312>
+
 [  FAILED  ] spec\cl_spec.lua @ 312: Test busted command-line runner runs standalone spec (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 326: Tests distinguish between errors and failures by detecting errors as test errors
 spec\cl_spec.lua:329: Expected to be truthy, but value was:
 (nil)
-[  FAILED  ] spec\cl_spec.lua @ 326: Tests distinguish between errors and failures by detecting errors as test errors (62.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:329: in function <spec\cl_spec.lua:326>
+
+[  FAILED  ] spec\cl_spec.lua @ 326: Tests distinguish between errors and failures by detecting errors as test errors (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 332: Tests distinguish between errors and failures by detecting assert failures as test failures
 spec\cl_spec.lua:335: Expected to be truthy, but value was:
 (nil)
+
+stack traceback:
+	spec\cl_spec.lua:335: in function <spec\cl_spec.lua:332>
+
 [  FAILED  ] spec\cl_spec.lua @ 332: Tests distinguish between errors and failures by detecting assert failures as test failures (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 338: Tests distinguish between errors and failures by detecting Lua runtime errors as test errors
 spec\cl_spec.lua:341: Expected to be truthy, but value was:
 (nil)
+
+stack traceback:
+	spec\cl_spec.lua:341: in function <spec\cl_spec.lua:338>
+
 [  FAILED  ] spec\cl_spec.lua @ 338: Tests distinguish between errors and failures by detecting Lua runtime errors as test errors (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 346: Tests stack trackback when throwing an error
 spec\cl_spec.lua:352: Expected objects to be equal.
@@ -327,6 +435,10 @@ Expected:
 (string) 'stack traceback:
 	spec\cl_errors.lua:6: in function <spec\cl_errors.lua:5>
 '
+
+stack traceback:
+	spec\cl_spec.lua:352: in function <spec\cl_spec.lua:346>
+
 [  FAILED  ] spec\cl_spec.lua @ 346: Tests stack trackback when throwing an error (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 355: Tests stack trackback when assertion fails
 spec\cl_spec.lua:361: Expected objects to be equal.
@@ -336,6 +448,10 @@ Expected:
 (string) 'stack traceback:
 	spec\cl_two_failures.lua:6: in function <spec\cl_two_failures.lua:5>
 '
+
+stack traceback:
+	spec\cl_spec.lua:361: in function <spec\cl_spec.lua:355>
+
 [  FAILED  ] spec\cl_spec.lua @ 355: Tests stack trackback when assertion fails (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 364: Tests stack trackback when Lua runtime error
 spec\cl_spec.lua:370: Expected objects to be equal.
@@ -345,6 +461,10 @@ Expected:
 (string) 'stack traceback:
 	spec\cl_errors.lua:11: in function <spec\cl_errors.lua:9>
 '
+
+stack traceback:
+	spec\cl_spec.lua:370: in function <spec\cl_spec.lua:364>
+
 [  FAILED  ] spec\cl_spec.lua @ 364: Tests stack trackback when Lua runtime error (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 375: Tests error messages through the command line when throwing errors in a test
 spec\cl_spec.lua:381: Expected objects to be equal.
@@ -352,6 +472,10 @@ Passed in:
 (nil)
 Expected:
 (string) 'Error -> spec\cl_errors.lua @ 5'
+
+stack traceback:
+	spec\cl_spec.lua:381: in function <spec\cl_spec.lua:375>
+
 [  FAILED  ] spec\cl_spec.lua @ 375: Tests error messages through the command line when throwing errors in a test (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 385: Tests error messages through the command line when throwing an error table
 spec\cl_spec.lua:389: Expected objects to be equal.
@@ -359,20 +483,32 @@ Passed in:
 (nil)
 Expected:
 (string) 'spec\cl_error_messages.lua:5: {'
-[  FAILED  ] spec\cl_spec.lua @ 385: Tests error messages through the command line when throwing an error table (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:389: in function <spec\cl_spec.lua:385>
+
+[  FAILED  ] spec\cl_spec.lua @ 385: Tests error messages through the command line when throwing an error table (62.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 392: Tests error messages through the command line when throwing a nil error
 spec\cl_spec.lua:396: Expected objects to be equal.
 Passed in:
 (nil)
 Expected:
 (string) 'spec\cl_error_messages.lua:9: Nil error'
-[  FAILED  ] spec\cl_spec.lua @ 392: Tests error messages through the command line when throwing a nil error (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:396: in function <spec\cl_spec.lua:392>
+
+[  FAILED  ] spec\cl_spec.lua @ 392: Tests error messages through the command line when throwing a nil error (94.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 399: Tests error messages through the command line when throwing an error table with __tostring
 spec\cl_spec.lua:403: Expected objects to be equal.
 Passed in:
 (nil)
 Expected:
 (string) 'spec\cl_error_messages.lua:17: {}'
+
+stack traceback:
+	spec\cl_spec.lua:403: in function <spec\cl_spec.lua:399>
+
 [  FAILED  ] spec\cl_spec.lua @ 399: Tests error messages through the command line when throwing an error table with __tostring (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 406: Tests error messages through the command line when throwing after a pcall
 spec\cl_spec.lua:410: Expected objects to be equal.
@@ -380,13 +516,21 @@ Passed in:
 (nil)
 Expected:
 (string) 'spec\cl_error_messages.lua:22: error after pcall'
-[  FAILED  ] spec\cl_spec.lua @ 406: Tests error messages through the command line when throwing after a pcall (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:410: in function <spec\cl_spec.lua:406>
+
+[  FAILED  ] spec\cl_spec.lua @ 406: Tests error messages through the command line when throwing after a pcall (62.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 413: Tests error messages through the command line when running a non-compiling testfile
 spec\cl_spec.lua:417: Expected objects to be equal.
 Passed in:
 (nil)
 Expected:
 (string) 'Error -> spec\cl_compile_fail.lua:3:'
+
+stack traceback:
+	spec\cl_spec.lua:417: in function <spec\cl_spec.lua:413>
+
 [  FAILED  ] spec\cl_spec.lua @ 413: Tests error messages through the command line when running a non-compiling testfile (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 420: Tests error messages through the command line when a testfile throws errors
 spec\cl_spec.lua:426: Expected objects to be equal.
@@ -394,6 +538,10 @@ Passed in:
 (nil)
 Expected:
 (string) 'Error -> spec\cl_execute_fail.lua @ 4'
+
+stack traceback:
+	spec\cl_spec.lua:426: in function <spec\cl_spec.lua:420>
+
 [  FAILED  ] spec\cl_spec.lua @ 420: Tests error messages through the command line when a testfile throws errors (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 430: Tests error messages through the command line when output library not found
 spec\cl_spec.lua:434: Expected objects to be equal.
@@ -401,6 +549,10 @@ Passed in:
 (string) 'lua: cannot open bin/busted: No such file or directory'
 Expected:
 (string) 'busted: error: Cannot load output library: not_found_here'
+
+stack traceback:
+	spec\cl_spec.lua:434: in function <spec\cl_spec.lua:430>
+
 [  FAILED  ] spec\cl_spec.lua @ 430: Tests error messages through the command line when output library not found (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 437: Tests error messages through the command line when helper script not found
 spec\cl_spec.lua:443: Expected objects to be equal.
@@ -408,6 +560,10 @@ Passed in:
 (nil)
 Expected:
 (string) 'module 'not_found_here' not found:'
+
+stack traceback:
+	spec\cl_spec.lua:443: in function <spec\cl_spec.lua:437>
+
 [  FAILED  ] spec\cl_spec.lua @ 437: Tests error messages through the command line when helper script not found (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 447: Tests error messages through the command line when helper lua script not found
 spec\cl_spec.lua:453: Expected objects to be equal.
@@ -415,6 +571,10 @@ Passed in:
 (nil)
 Expected:
 (string) 'cannot open not_found_here.lua: No such file or directory'
+
+stack traceback:
+	spec\cl_spec.lua:453: in function <spec\cl_spec.lua:447>
+
 [  FAILED  ] spec\cl_spec.lua @ 447: Tests error messages through the command line when helper lua script not found (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 457: Tests error messages through the command line when test file not found
 spec\cl_spec.lua:461: Expected objects to be equal.
@@ -422,6 +582,10 @@ Passed in:
 (nil)
 Expected:
 (string) 'Cannot find file or directory: does_not_exist.lua'
+
+stack traceback:
+	spec\cl_spec.lua:461: in function <spec\cl_spec.lua:457>
+
 [  FAILED  ] spec\cl_spec.lua @ 457: Tests error messages through the command line when test file not found (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 464: Tests error messages through the command line when test directory not found
 spec\cl_spec.lua:468: Expected objects to be equal.
@@ -429,6 +593,10 @@ Passed in:
 (nil)
 Expected:
 (string) 'Cannot find file or directory: does_not_exist'
+
+stack traceback:
+	spec\cl_spec.lua:468: in function <spec\cl_spec.lua:464>
+
 [  FAILED  ] spec\cl_spec.lua @ 464: Tests error messages through the command line when test directory not found (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 471: Tests error messages through the command line when no test files matching Lua pattern
 spec\cl_spec.lua:475: Expected objects to be equal.
@@ -436,6 +604,10 @@ Passed in:
 (nil)
 Expected:
 (string) 'No test files found matching Lua pattern: this_filename_does_simply_not_exist$'
+
+stack traceback:
+	spec\cl_spec.lua:475: in function <spec\cl_spec.lua:471>
+
 [  FAILED  ] spec\cl_spec.lua @ 471: Tests error messages through the command line when no test files matching Lua pattern (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 478: Tests error messages through the command line when __gc metamethod throws error
 [ SKIPPED  ] spec\cl_spec.lua @ 478: Tests error messages through the command line when __gc metamethod throws error (0.00 ms)
@@ -447,20 +619,36 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:540: in function <spec\cl_spec.lua:537>
+
 [  FAILED  ] spec\cl_spec.lua @ 537: Tests pending through the commandline skips tests inside pending scope (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 544: Tests pending through the commandline detects tests as pending
 spec\cl_spec.lua:547: attempt to index local 'line1' (a nil value)
+
+stack traceback:
+	spec\cl_spec.lua:547: in function <spec\cl_spec.lua:544>
+
 [  ERROR   ] spec\cl_spec.lua @ 544: Tests pending through the commandline detects tests as pending (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 553: Tests pending through the commandline --suppress-pending option is honored
 spec\cl_spec.lua:556: attempt to index local 'line1' (a nil value)
-[  ERROR   ] spec\cl_spec.lua @ 553: Tests pending through the commandline --suppress-pending option is honored (93.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:556: in function <spec\cl_spec.lua:553>
+
+[  ERROR   ] spec\cl_spec.lua @ 553: Tests pending through the commandline --suppress-pending option is honored (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 564: Tests random seed through the commandline test seed value
 spec\cl_spec.lua:567: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 564: Tests random seed through the commandline test seed value (63.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:567: in function <spec\cl_spec.lua:564>
+
+[  FAILED  ] spec\cl_spec.lua @ 564: Tests random seed through the commandline test seed value (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 571: Tests random seed through the commandline test invalid seed value exits with error
 [       OK ] spec\cl_spec.lua @ 571: Tests random seed through the commandline test invalid seed value exits with error (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 577: Tests random seed through the commandline test failure outputs random seed value
@@ -469,15 +657,23 @@ Passed in:
 (nil)
 Expected:
 (number) 789
+
+stack traceback:
+	spec\cl_spec.lua:580: in function <spec\cl_spec.lua:577>
+
 [  FAILED  ] spec\cl_spec.lua @ 577: Tests random seed through the commandline test failure outputs random seed value (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 583: Tests random seed through the commandline test non-randomized failure does not output seed value
-[       OK ] spec\cl_spec.lua @ 583: Tests random seed through the commandline test non-randomized failure does not output seed value (78.00 ms)
+[       OK ] spec\cl_spec.lua @ 583: Tests random seed through the commandline test non-randomized failure does not output seed value (62.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 592: Tests shuffle commandline option forces test shuffling for non-randomized tests, --shuffle
 spec\cl_spec.lua:594: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\cl_spec.lua:594: in function <spec\cl_spec.lua:592>
+
 [  FAILED  ] spec\cl_spec.lua @ 592: Tests shuffle commandline option forces test shuffling for non-randomized tests, --shuffle (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 592: Tests shuffle commandline option forces test shuffling for non-randomized tests, --shuffle-tests
 spec\cl_spec.lua:594: Expected objects to be the same.
@@ -485,27 +681,43 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 592: Tests shuffle commandline option forces test shuffling for non-randomized tests, --shuffle-tests (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:594: in function <spec\cl_spec.lua:592>
+
+[  FAILED  ] spec\cl_spec.lua @ 592: Tests shuffle commandline option forces test shuffling for non-randomized tests, --shuffle-tests (125.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 602: Tests sort commandline option sorts tests by name, --sort
 spec\cl_spec.lua:604: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 602: Tests sort commandline option sorts tests by name, --sort (62.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:604: in function <spec\cl_spec.lua:602>
+
+[  FAILED  ] spec\cl_spec.lua @ 602: Tests sort commandline option sorts tests by name, --sort (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 602: Tests sort commandline option sorts tests by name, --sort-tests
 spec\cl_spec.lua:604: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 602: Tests sort commandline option sorts tests by name, --sort-tests (94.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:604: in function <spec\cl_spec.lua:602>
+
+[  FAILED  ] spec\cl_spec.lua @ 602: Tests sort commandline option sorts tests by name, --sort-tests (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 611: Tests repeat commandline option forces tests to repeat n times
 spec\cl_spec.lua:614: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 4
+
+stack traceback:
+	spec\cl_spec.lua:614: in function <spec\cl_spec.lua:611>
+
 [  FAILED  ] spec\cl_spec.lua @ 611: Tests repeat commandline option forces tests to repeat n times (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 617: Tests repeat commandline option exits with error when repeat is invalid
 [       OK ] spec\cl_spec.lua @ 617: Tests repeat commandline option exits with error when repeat is invalid (78.00 ms)
@@ -515,13 +727,21 @@ Passed in:
 (number) 0
 Expected:
 (number) 1
-[  FAILED  ] spec\cl_spec.lua @ 625: Tests no-keep-going commandline option skips all tests after first error (93.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:628: in function <spec\cl_spec.lua:625>
+
+[  FAILED  ] spec\cl_spec.lua @ 625: Tests no-keep-going commandline option skips all tests after first error (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 633: Tests no-recursive commandline option does not run any tests in subdirectories
 spec\cl_spec.lua:636: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 1
+
+stack traceback:
+	spec\cl_spec.lua:636: in function <spec\cl_spec.lua:633>
+
 [  FAILED  ] spec\cl_spec.lua @ 633: Tests no-recursive commandline option does not run any tests in subdirectories (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 641: Tests no-auto-insulate commandline option does not insulate test files
 spec\cl_spec.lua:644: Expected objects to be equal.
@@ -529,6 +749,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 1
+
+stack traceback:
+	spec\cl_spec.lua:644: in function <spec\cl_spec.lua:641>
+
 [  FAILED  ] spec\cl_spec.lua @ 641: Tests no-auto-insulate commandline option does not insulate test files (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 649: Tests Xoutput commandline option forwards no options to output handler when no options specified
 spec\cl_spec.lua:652: Expected objects to be equal.
@@ -536,6 +760,10 @@ Passed in:
 (nil)
 Expected:
 (string) ' success'
+
+stack traceback:
+	spec\cl_spec.lua:652: in function <spec\cl_spec.lua:649>
+
 [  FAILED  ] spec\cl_spec.lua @ 649: Tests Xoutput commandline option forwards no options to output handler when no options specified (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 655: Tests Xoutput commandline option forwards single option to output handler
 spec\cl_spec.lua:658: Expected objects to be equal.
@@ -543,13 +771,21 @@ Passed in:
 (nil)
 Expected:
 (string) 'Fri Jan 02 10:17:36 1970'
-[  FAILED  ] spec\cl_spec.lua @ 655: Tests Xoutput commandline option forwards single option to output handler (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:658: in function <spec\cl_spec.lua:655>
+
+[  FAILED  ] spec\cl_spec.lua @ 655: Tests Xoutput commandline option forwards single option to output handler (62.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 661: Tests Xoutput commandline option forwards multiple options to output handler
 spec\cl_spec.lua:664: Expected objects to be equal.
 Passed in:
 (nil)
 Expected:
 (string) '10:17:36'
+
+stack traceback:
+	spec\cl_spec.lua:664: in function <spec\cl_spec.lua:661>
+
 [  FAILED  ] spec\cl_spec.lua @ 661: Tests Xoutput commandline option forwards multiple options to output handler (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 667: Tests Xoutput commandline option forwards multiple options to output handler using multiple -Xoutput
 spec\cl_spec.lua:670: Expected objects to be equal.
@@ -557,20 +793,32 @@ Passed in:
 (nil)
 Expected:
 (string) '10:17:36'
-[  FAILED  ] spec\cl_spec.lua @ 667: Tests Xoutput commandline option forwards multiple options to output handler using multiple -Xoutput (63.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:670: in function <spec\cl_spec.lua:667>
+
+[  FAILED  ] spec\cl_spec.lua @ 667: Tests Xoutput commandline option forwards multiple options to output handler using multiple -Xoutput (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 675: Tests Xhelper commandline option forwards no options to helper script when no options specified
 spec\cl_spec.lua:677: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 675: Tests Xhelper commandline option forwards no options to helper script when no options specified (63.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:677: in function <spec\cl_spec.lua:675>
+
+[  FAILED  ] spec\cl_spec.lua @ 675: Tests Xhelper commandline option forwards no options to helper script when no options specified (94.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 680: Tests Xhelper commandline option forwards single option to helper script
 spec\cl_spec.lua:683: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 1
+
+stack traceback:
+	spec\cl_spec.lua:683: in function <spec\cl_spec.lua:680>
+
 [  FAILED  ] spec\cl_spec.lua @ 680: Tests Xhelper commandline option forwards single option to helper script (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 686: Tests Xhelper commandline option forwards multiple options to helper script
 spec\cl_spec.lua:689: Expected objects to be equal.
@@ -578,6 +826,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 2
+
+stack traceback:
+	spec\cl_spec.lua:689: in function <spec\cl_spec.lua:686>
+
 [  FAILED  ] spec\cl_spec.lua @ 686: Tests Xhelper commandline option forwards multiple options to helper script (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 692: Tests Xhelper commandline option forwards multiple options to helper script using multiple -Xhelper
 spec\cl_spec.lua:695: Expected objects to be equal.
@@ -585,6 +837,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 2
+
+stack traceback:
+	spec\cl_spec.lua:695: in function <spec\cl_spec.lua:692>
+
 [  FAILED  ] spec\cl_spec.lua @ 692: Tests Xhelper commandline option forwards multiple options to helper script using multiple -Xhelper (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 700: Tests helper script can add setup to test suite
 spec\cl_spec.lua:703: Expected objects to be equal.
@@ -592,13 +848,21 @@ Passed in:
 (number) 0
 Expected:
 (number) 1
-[  FAILED  ] spec\cl_spec.lua @ 700: Tests helper script can add setup to test suite (62.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:703: in function <spec\cl_spec.lua:700>
+
+[  FAILED  ] spec\cl_spec.lua @ 700: Tests helper script can add setup to test suite (109.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 706: Tests helper script can add teardown to test suite
 spec\cl_spec.lua:709: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 3
+
+stack traceback:
+	spec\cl_spec.lua:709: in function <spec\cl_spec.lua:706>
+
 [  FAILED  ] spec\cl_spec.lua @ 706: Tests helper script can add teardown to test suite (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 712: Tests helper script runs setup/teardown for mutiple runs
 spec\cl_spec.lua:715: Expected objects to be equal.
@@ -606,6 +870,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 4
+
+stack traceback:
+	spec\cl_spec.lua:715: in function <spec\cl_spec.lua:712>
+
 [  FAILED  ] spec\cl_spec.lua @ 712: Tests helper script runs setup/teardown for mutiple runs (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 718: Tests helper script runs setup/teardown for mutiple runs with --lazy
 spec\cl_spec.lua:721: Expected objects to be equal.
@@ -613,13 +881,21 @@ Passed in:
 (number) 0
 Expected:
 (number) 4
-[  FAILED  ] spec\cl_spec.lua @ 718: Tests helper script runs setup/teardown for mutiple runs with --lazy (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:721: in function <spec\cl_spec.lua:718>
+
+[  FAILED  ] spec\cl_spec.lua @ 718: Tests helper script runs setup/teardown for mutiple runs with --lazy (62.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 724: Tests helper script can subscribe to suite start/reset
 spec\cl_spec.lua:727: Expected objects to be equal.
 Passed in:
 (number) 0
 Expected:
 (number) 3
+
+stack traceback:
+	spec\cl_spec.lua:727: in function <spec\cl_spec.lua:724>
+
 [  FAILED  ] spec\cl_spec.lua @ 724: Tests helper script can subscribe to suite start/reset (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 730: Tests helper script can subscribe to suite end
 [       OK ] spec\cl_spec.lua @ 730: Tests helper script can subscribe to suite end (78.00 ms)
@@ -629,6 +905,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 2
+
+stack traceback:
+	spec\cl_spec.lua:739: in function <spec\cl_spec.lua:736>
+
 [  FAILED  ] spec\cl_spec.lua @ 736: Tests helper script can subscribe to file start/end (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 742: Tests helper script can subscribe to describe start/end
 spec\cl_spec.lua:745: Expected objects to be equal.
@@ -636,6 +916,10 @@ Passed in:
 (number) 0
 Expected:
 (number) 2
+
+stack traceback:
+	spec\cl_spec.lua:745: in function <spec\cl_spec.lua:742>
+
 [  FAILED  ] spec\cl_spec.lua @ 742: Tests helper script can subscribe to describe start/end (78.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 748: Tests helper script can subscribe to test start/end
 spec\cl_spec.lua:751: Expected objects to be equal.
@@ -643,22 +927,34 @@ Passed in:
 (number) 0
 Expected:
 (number) 4
-[  FAILED  ] spec\cl_spec.lua @ 748: Tests helper script can subscribe to test start/end (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:751: in function <spec\cl_spec.lua:748>
+
+[  FAILED  ] spec\cl_spec.lua @ 748: Tests helper script can subscribe to test start/end (63.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 756: Tests strict with helper script does not detect any errors
 spec\cl_spec.lua:758: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 756: Tests strict with helper script does not detect any errors (78.00 ms)
+
+stack traceback:
+	spec\cl_spec.lua:758: in function <spec\cl_spec.lua:756>
+
+[  FAILED  ] spec\cl_spec.lua @ 756: Tests strict with helper script does not detect any errors (140.00 ms)
 [ RUN      ] spec\cl_spec.lua @ 763: Tests execute option will run the specified statement
 spec\cl_spec.lua:765: Expected objects to be the same.
 Passed in:
 (boolean) false
 Expected:
 (boolean) true
-[  FAILED  ] spec\cl_spec.lua @ 763: Tests execute option will run the specified statement (62.00 ms)
-[----------] 90 tests from spec\cl_spec.lua (7613.00 ms total)
+
+stack traceback:
+	spec\cl_spec.lua:765: in function <spec\cl_spec.lua:763>
+
+[  FAILED  ] spec\cl_spec.lua @ 763: Tests execute option will run the specified statement (94.00 ms)
+[----------] 90 tests from spec\cl_spec.lua (7816.00 ms total)
 
 [----------] Running tests from spec\cliargs_parsing_spec.lua
 [ RUN      ] spec\cliargs_parsing_spec.lua @ 30: Testing cliargs library parsing commandlines Tests argument parsing with callback tests one required argument
@@ -673,61 +969,130 @@ Expected:
 [       OK ] spec\cliargs_parsing_spec.lua @ 67: Testing cliargs library parsing commandlines Tests argument parsing with callback tests optional argument callback returning error (0.00 ms)
 [ RUN      ] spec\cliargs_parsing_spec.lua @ 75: Testing cliargs library parsing commandlines Tests argument parsing with callback tests many optional arguments
 [       OK ] spec\cliargs_parsing_spec.lua @ 75: Testing cliargs library parsing commandlines Tests argument parsing with callback tests many optional arguments (0.00 ms)
-[----------] 6 tests from spec\cliargs_parsing_spec.lua (16.00 ms total)
+[----------] 6 tests from spec\cliargs_parsing_spec.lua (0.00 ms total)
 
 [----------] Running tests from spec\cliargs_spec.lua
-spec\cliargs_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\cliargs_spec.lua (0.00 ms total)
+[ RUN      ] spec\cliargs_spec.lua @ 13: cliargs does not blow up!
+[       OK ] spec\cliargs_spec.lua @ 13: cliargs does not blow up! (0.00 ms)
+[ RUN      ] spec\cliargs_spec.lua @ 16: cliargs yields a default core instance
+[       OK ] spec\cliargs_spec.lua @ 16: cliargs yields a default core instance (0.00 ms)
+[ RUN      ] spec\cliargs_spec.lua @ 21: cliargs #parse works
+[       OK ] spec\cliargs_spec.lua @ 21: cliargs #parse works (0.00 ms)
+[ RUN      ] spec\cliargs_spec.lua @ 31: cliargs #parse propagates errors
+[       OK ] spec\cliargs_spec.lua @ 31: cliargs #parse propagates errors (0.00 ms)
+[ RUN      ] spec\cliargs_spec.lua @ 41: cliargs #cleanup exposes a cleanup routine
+[       OK ] spec\cliargs_spec.lua @ 41: cliargs #cleanup exposes a cleanup routine (0.00 ms)
+[ RUN      ] spec\cliargs_spec.lua @ 45: cliargs #cleanup actually cleans up
+[       OK ] spec\cliargs_spec.lua @ 45: cliargs #cleanup actually cleans up (0.00 ms)
+[----------] 6 tests from spec\cliargs_spec.lua (15.00 ms total)
 
 [----------] Running tests from spec\config_loader_spec.lua
-spec\config_loader_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
+[ RUN      ] spec\config_loader_spec.lua @ 30: cliargs.config_loader #from_json works
+[       OK ] spec\config_loader_spec.lua @ 30: cliargs.config_loader #from_json works (0.00 ms)
+[ RUN      ] spec\config_loader_spec.lua @ 36: cliargs.config_loader #from_ini works
+C:\Lua\5.1\lua\cliargs\config_loader.lua:82: module 'inifile' not found:
+	no field package.preload['inifile']
+	no file 'spec/inifile.lua'
+	no file '.\inifile.lua'
+	no file 'C:\Lua\5.1\lua\inifile.lua'
+	no file 'C:\Lua\5.1\lua\inifile\init.lua'
+	no file 'C:\Lua\5.1\inifile.lua'
+	no file 'C:\Lua\5.1\inifile\init.lua'
+	no file '.\inifile.lua'
+	no file 'C:\Lua\5.1\lua\inifile.lua'
+	no file 'C:\Lua\5.1\lua\inifile\init.lua'
+	no file 'C:\Lua\5.1\inifile.lua'
+	no file 'C:\Lua\5.1\inifile\init.lua'
+	no file './csrc/inifile.dll'
+	no file './csrc/inifile/inifile.dll'
+	no file '.\inifile.dll'
+	no file 'C:\Lua\5.1\inifile.dll'
 	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\config_loader_spec.lua (0.00 ms total)
+
+stack traceback:
+	C:\Lua\5.1\lua\cliargs\config_loader.lua:82: in function <C:\Lua\5.1\lua\cliargs\config_loader.lua:81>
+	(tail call): ?
+	spec\config_loader_spec.lua:13: in function 'callback'
+	C:\Lua\5.1\lua\cliargs\parser.lua:170: in function <C:\Lua\5.1\lua\cliargs\parser.lua:89>
+	(tail call): ?
+	(tail call): ?
+	(tail call): ?
+	(tail call): ?
+	...
+	C:\Lua\5.1\lua\busted\block.lua:155: in function 'execute'
+	C:\Lua\5.1\lua\busted\init.lua:7: in function 'executor'
+	C:\Lua\5.1\lua\busted\core.lua:312: in function <C:\Lua\5.1\lua\busted\core.lua:312>
+
+[  ERROR   ] spec\config_loader_spec.lua @ 36: cliargs.config_loader #from_ini works (0.00 ms)
+[ RUN      ] spec\config_loader_spec.lua @ 42: cliargs.config_loader #from_yaml works
+C:\Lua\5.1\lua\cliargs\config_loader.lua:123: module 'yaml' not found:
+	no field package.preload['yaml']
+	no file 'spec/yaml.lua'
+	no file '.\yaml.lua'
+	no file 'C:\Lua\5.1\lua\yaml.lua'
+	no file 'C:\Lua\5.1\lua\yaml\init.lua'
+	no file 'C:\Lua\5.1\yaml.lua'
+	no file 'C:\Lua\5.1\yaml\init.lua'
+	no file '.\yaml.lua'
+	no file 'C:\Lua\5.1\lua\yaml.lua'
+	no file 'C:\Lua\5.1\lua\yaml\init.lua'
+	no file 'C:\Lua\5.1\yaml.lua'
+	no file 'C:\Lua\5.1\yaml\init.lua'
+	no file './csrc/yaml.dll'
+	no file './csrc/yaml/yaml.dll'
+	no file '.\yaml.dll'
+	no file 'C:\Lua\5.1\yaml.dll'
+	no file 'C:\Lua\5.1\loadall.dll'
+
+stack traceback:
+	C:\Lua\5.1\lua\cliargs\config_loader.lua:123: in function <C:\Lua\5.1\lua\cliargs\config_loader.lua:121>
+	(tail call): ?
+	spec\config_loader_spec.lua:13: in function 'callback'
+	C:\Lua\5.1\lua\cliargs\parser.lua:170: in function <C:\Lua\5.1\lua\cliargs\parser.lua:89>
+	(tail call): ?
+	(tail call): ?
+	(tail call): ?
+	(tail call): ?
+	...
+	C:\Lua\5.1\lua\busted\block.lua:155: in function 'execute'
+	C:\Lua\5.1\lua\busted\init.lua:7: in function 'executor'
+	C:\Lua\5.1\lua\busted\core.lua:312: in function <C:\Lua\5.1\lua\busted\core.lua:312>
+
+[  ERROR   ] spec\config_loader_spec.lua @ 42: cliargs.config_loader #from_yaml works (0.00 ms)
+[ RUN      ] spec\config_loader_spec.lua @ 48: cliargs.config_loader #from_lua works
+[       OK ] spec\config_loader_spec.lua @ 48: cliargs.config_loader #from_lua works (0.00 ms)
+[----------] 4 tests from spec\config_loader_spec.lua (0.00 ms total)
 
 [----------] Running tests from spec\core_spec.lua
-spec\core_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\core_spec.lua (0.00 ms total)
+[ RUN      ] spec\core_spec.lua @ 22: cliargs::core #parse when invoked without the arguments table uses the global _G["arg"] one
+[       OK ] spec\core_spec.lua @ 22: cliargs::core #parse when invoked without the arguments table uses the global _G["arg"] one (16.00 ms)
+[ RUN      ] spec\core_spec.lua @ 31: cliargs::core #parse does not mutate the argument table
+[       OK ] spec\core_spec.lua @ 31: cliargs::core #parse does not mutate the argument table (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 41: cliargs::core #parse generates the help listing but does not print it to STDOUT
+[       OK ] spec\core_spec.lua @ 41: cliargs::core #parse generates the help listing but does not print it to STDOUT (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 48: cliargs::core #parse returns error strings but does not print them to STDOUT
+[       OK ] spec\core_spec.lua @ 48: cliargs::core #parse returns error strings but does not print them to STDOUT (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 69: cliargs::core #parse displaying the help listing works with --help in the beginning
+[       OK ] spec\core_spec.lua @ 69: cliargs::core #parse displaying the help listing works with --help in the beginning (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 73: cliargs::core #parse displaying the help listing works with --help in the end of options
+[       OK ] spec\core_spec.lua @ 73: cliargs::core #parse displaying the help listing works with --help in the end of options (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 77: cliargs::core #parse displaying the help listing works with --help after an argument
+[       OK ] spec\core_spec.lua @ 77: cliargs::core #parse displaying the help listing works with --help after an argument (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 84: cliargs::core #parse - the --__DUMP__ special option dumps the state and errors out
+[       OK ] spec\core_spec.lua @ 84: cliargs::core #parse - the --__DUMP__ special option dumps the state and errors out (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 99: cliargs::core #redefine_default allows me to change the default for an optargument
+[       OK ] spec\core_spec.lua @ 99: cliargs::core #redefine_default allows me to change the default for an optargument (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 107: cliargs::core #redefine_default allows me to change the default for an option
+[       OK ] spec\core_spec.lua @ 107: cliargs::core #redefine_default allows me to change the default for an option (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 115: cliargs::core #redefine_default allows me to change the default for a flag
+[       OK ] spec\core_spec.lua @ 115: cliargs::core #redefine_default allows me to change the default for a flag (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 132: cliargs::core #load_defaults works
+[       OK ] spec\core_spec.lua @ 132: cliargs::core #load_defaults works (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 150: cliargs::core #load_defaults when @strict is not true ignores keys that could not be mapped
+[       OK ] spec\core_spec.lua @ 150: cliargs::core #load_defaults when @strict is not true ignores keys that could not be mapped (0.00 ms)
+[ RUN      ] spec\core_spec.lua @ 170: cliargs::core #load_defaults when @strict is true returns an error message if a key could not be mapped
+[       OK ] spec\core_spec.lua @ 170: cliargs::core #load_defaults when @strict is true returns an error message if a key could not be mapped (0.00 ms)
+[----------] 14 tests from spec\core_spec.lua (16.00 ms total)
 
 [----------] Running tests from spec\execution_order_sync_spec.lua
 [ RUN      ] spec\execution_order_sync_spec.lua @ 29: before_each after_each egg test asd 1
@@ -766,22 +1131,29 @@ spec\core_spec.lua:1: module 'spec_helper' not found:
 [----------] 10 tests from spec\export_spec.lua (16.00 ms total)
 
 [----------] Running tests from spec\features\argument_spec.lua
-spec\features\argument_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\features\argument_spec.lua (0.00 ms total)
+[ RUN      ] spec\features\argument_spec.lua @ 11: cliargs - arguments defining arguments works
+[       OK ] spec\features\argument_spec.lua @ 11: cliargs - arguments defining arguments works (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 17: cliargs - arguments defining arguments requires a key
+[       OK ] spec\features\argument_spec.lua @ 17: cliargs - arguments defining arguments requires a key (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 23: cliargs - arguments defining arguments requires a description
+[       OK ] spec\features\argument_spec.lua @ 23: cliargs - arguments defining arguments requires a description (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 29: cliargs - arguments defining arguments rejects a bad callback
+[       OK ] spec\features\argument_spec.lua @ 29: cliargs - arguments defining arguments rejects a bad callback (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 35: cliargs - arguments defining arguments rejects duplicate arguments
+[       OK ] spec\features\argument_spec.lua @ 35: cliargs - arguments defining arguments rejects duplicate arguments (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 45: cliargs - arguments parsing arguments works with a single argument
+[       OK ] spec\features\argument_spec.lua @ 45: cliargs - arguments parsing arguments works with a single argument (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 53: cliargs - arguments parsing arguments works with multiple arguments
+[       OK ] spec\features\argument_spec.lua @ 53: cliargs - arguments parsing arguments works with multiple arguments (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 63: cliargs - arguments parsing arguments bails on missing arguments
+[       OK ] spec\features\argument_spec.lua @ 63: cliargs - arguments parsing arguments bails on missing arguments (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 71: cliargs - arguments parsing arguments bails on too many arguments
+[       OK ] spec\features\argument_spec.lua @ 71: cliargs - arguments parsing arguments bails on too many arguments (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 95: cliargs - arguments @callback given a single argument invokes the callback when the argument is parsed
+[       OK ] spec\features\argument_spec.lua @ 95: cliargs - arguments @callback given a single argument invokes the callback when the argument is parsed (0.00 ms)
+[ RUN      ] spec\features\argument_spec.lua @ 110: cliargs - arguments @callback given multiple arguments invokes the callback for each argument parsed
+[       OK ] spec\features\argument_spec.lua @ 110: cliargs - arguments @callback given multiple arguments invokes the callback for each argument parsed (0.00 ms)
+[----------] 11 tests from spec\features\argument_spec.lua (0.00 ms total)
 
 [----------] Running tests from spec\features\command_spec.lua
 [ RUN      ] spec\features\command_spec.lua @ 9: cliargs - commands defining commands works
@@ -803,76 +1175,164 @@ spec\features\argument_spec.lua:1: module 'spec_helper' not found:
 [----------] 8 tests from spec\features\command_spec.lua (15.00 ms total)
 
 [----------] Running tests from spec\features\flag_spec.lua
-spec\features\flag_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\features\flag_spec.lua (0.00 ms total)
+[ RUN      ] spec\features\flag_spec.lua @ 11: cliargs - flags defining flags works
+[       OK ] spec\features\flag_spec.lua @ 11: cliargs - flags defining flags works (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 17: cliargs - flags defining flags requires a key
+[       OK ] spec\features\flag_spec.lua @ 17: cliargs - flags defining flags requires a key (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 23: cliargs - flags defining flags requires a description
+[       OK ] spec\features\flag_spec.lua @ 23: cliargs - flags defining flags requires a description (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 29: cliargs - flags defining flags rejects a value label
+[       OK ] spec\features\flag_spec.lua @ 29: cliargs - flags defining flags rejects a value label (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 35: cliargs - flags defining flags rejects a duplicate flag
+[       OK ] spec\features\flag_spec.lua @ 35: cliargs - flags defining flags rejects a duplicate flag (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 45: cliargs - flags parsing works with only a short key: -v
+[       OK ] spec\features\flag_spec.lua @ 45: cliargs - flags parsing works with only a short key: -v (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 50: cliargs - flags parsing works with only an expanded key: --verbose
+[       OK ] spec\features\flag_spec.lua @ 50: cliargs - flags parsing works with only an expanded key: --verbose (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 55: cliargs - flags parsing works with both: -v, --verbose
+[       OK ] spec\features\flag_spec.lua @ 55: cliargs - flags parsing works with both: -v, --verbose (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 62: cliargs - flags parsing given a default value accepts a nil
+[       OK ] spec\features\flag_spec.lua @ 62: cliargs - flags parsing given a default value accepts a nil (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 70: cliargs - flags parsing given a default value accepts a true value
+[       OK ] spec\features\flag_spec.lua @ 70: cliargs - flags parsing given a default value accepts a true value (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 78: cliargs - flags parsing given a default value accepts a false value
+[       OK ] spec\features\flag_spec.lua @ 78: cliargs - flags parsing given a default value accepts a false value (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 88: cliargs - flags parsing given an unknown flag bails
+[       OK ] spec\features\flag_spec.lua @ 88: cliargs - flags parsing given an unknown flag bails (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 100: cliargs - flags parsing an option with a short key longer than 1 char works
+[       OK ] spec\features\flag_spec.lua @ 100: cliargs - flags parsing an option with a short key longer than 1 char works (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 112: cliargs - flags parsing negatable flags when a flag is negatable (-q, --[no-]quiet) works
+[       OK ] spec\features\flag_spec.lua @ 112: cliargs - flags parsing negatable flags when a flag is negatable (-q, --[no-]quiet) works (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 117: cliargs - flags parsing negatable flags when a flag is negatable (-q, --[no-]quiet) overrides the original version (-q --no-quiet => false)
+[       OK ] spec\features\flag_spec.lua @ 117: cliargs - flags parsing negatable flags when a flag is negatable (-q, --[no-]quiet) overrides the original version (-q --no-quiet => false) (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 122: cliargs - flags parsing negatable flags when a flag is negatable (-q, --[no-]quiet) ignores the negated version (--no-quiet -q => true)
+[       OK ] spec\features\flag_spec.lua @ 122: cliargs - flags parsing negatable flags when a flag is negatable (-q, --[no-]quiet) ignores the negated version (--no-quiet -q => true) (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 133: cliargs - flags parsing negatable flags when a flag is NON-negatable (-q, --quiet) bails
+[       OK ] spec\features\flag_spec.lua @ 133: cliargs - flags parsing negatable flags when a flag is NON-negatable (-q, --quiet) bails (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 153: cliargs - flags @callback given a single flag invokes the callback when the flag is parsed
+[       OK ] spec\features\flag_spec.lua @ 153: cliargs - flags @callback given a single flag invokes the callback when the flag is parsed (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 169: cliargs - flags @callback given a negated flag invokes the callback when the flag is parsed
+[       OK ] spec\features\flag_spec.lua @ 169: cliargs - flags @callback given a negated flag invokes the callback when the flag is parsed (0.00 ms)
+[ RUN      ] spec\features\flag_spec.lua @ 186: cliargs - flags @callback given multiple flags invokes the callback for each flag parsed
+[       OK ] spec\features\flag_spec.lua @ 186: cliargs - flags @callback given multiple flags invokes the callback for each flag parsed (0.00 ms)
+[----------] 20 tests from spec\features\flag_spec.lua (16.00 ms total)
 
 [----------] Running tests from spec\features\integration_spec.lua
-spec\features\integration_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\features\integration_spec.lua (0.00 ms total)
+[ RUN      ] spec\features\integration_spec.lua @ 10: integration: parsing is a no-op when no arguments or options are defined
+[       OK ] spec\features\integration_spec.lua @ 10: integration: parsing is a no-op when no arguments or options are defined (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 15: integration: parsing given a set of arguments works when all are passed in
+[       OK ] spec\features\integration_spec.lua @ 15: integration: parsing given a set of arguments works when all are passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 31: integration: parsing given an argument and a splat works when only the argument is passed in
+[       OK ] spec\features\integration_spec.lua @ 31: integration: parsing given an argument and a splat works when only the argument is passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 37: integration: parsing given an argument and a splat works when both are passed in
+[       OK ] spec\features\integration_spec.lua @ 37: integration: parsing given an argument and a splat works when both are passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 43: integration: parsing given an argument and a splat works when both are passed in with repetition for the splat
+[       OK ] spec\features\integration_spec.lua @ 43: integration: parsing given an argument and a splat works when both are passed in with repetition for the splat (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 51: integration: parsing given a set of options works when nothing is passed in
+[       OK ] spec\features\integration_spec.lua @ 51: integration: parsing given a set of options works when nothing is passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 60: integration: parsing given a set of options works when they are passed in
+[       OK ] spec\features\integration_spec.lua @ 60: integration: parsing given a set of options works when they are passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 81: integration: parsing given arguments, options, and flags works when nothing but arguments are passed in
+[       OK ] spec\features\integration_spec.lua @ 81: integration: parsing given arguments, options, and flags works when nothing but arguments are passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 91: integration: parsing given arguments, options, and flags works when arguments and options are passed in
+[       OK ] spec\features\integration_spec.lua @ 91: integration: parsing given arguments, options, and flags works when arguments and options are passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 101: integration: parsing given arguments, options, and flags works when everything is passed in
+[       OK ] spec\features\integration_spec.lua @ 101: integration: parsing given arguments, options, and flags works when everything is passed in (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 111: integration: parsing given arguments, options, and flags works when an option comes after an argument
+[       OK ] spec\features\integration_spec.lua @ 111: integration: parsing given arguments, options, and flags works when an option comes after an argument (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 130: integration: parsing using -- to separate options from arguments works
+[       OK ] spec\features\integration_spec.lua @ 130: integration: parsing using -- to separate options from arguments works (0.00 ms)
+[ RUN      ] spec\features\integration_spec.lua @ 141: integration: parsing using -- to separate options from arguments does not actually parse an option if it comes after --
+[       OK ] spec\features\integration_spec.lua @ 141: integration: parsing using -- to separate options from arguments does not actually parse an option if it comes after -- (0.00 ms)
+[----------] 13 tests from spec\features\integration_spec.lua (15.00 ms total)
 
 [----------] Running tests from spec\features\option_spec.lua
-spec\features\option_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\features\option_spec.lua (0.00 ms total)
+[ RUN      ] spec\features\option_spec.lua @ 11: cliargs - options defining options requires a key
+[       OK ] spec\features\option_spec.lua @ 11: cliargs - options defining options requires a key (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 17: cliargs - options defining options requires a description
+[       OK ] spec\features\option_spec.lua @ 17: cliargs - options defining options requires a description (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 23: cliargs - options defining options works
+[       OK ] spec\features\option_spec.lua @ 23: cliargs - options defining options works (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 29: cliargs - options defining options rejects a duplicate option
+[       OK ] spec\features\option_spec.lua @ 29: cliargs - options defining options rejects a duplicate option (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 38: cliargs - options works with only a short key: -u VALUE
+[       OK ] spec\features\option_spec.lua @ 38: cliargs - options works with only a short key: -u VALUE (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 43: cliargs - options works with only an expanded key: --url=VALUE
+[       OK ] spec\features\option_spec.lua @ 43: cliargs - options works with only an expanded key: --url=VALUE (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 48: cliargs - options works with only an expanded key using space as a delimiter: --url VALUE
+[       OK ] spec\features\option_spec.lua @ 48: cliargs - options works with only an expanded key using space as a delimiter: --url VALUE (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 53: cliargs - options works with both: -u, --url=VALUE
+[       OK ] spec\features\option_spec.lua @ 53: cliargs - options works with both: -u, --url=VALUE (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 59: cliargs - options works with both keys and no comma between them: -u --url VALUE
+[       OK ] spec\features\option_spec.lua @ 59: cliargs - options works with both keys and no comma between them: -u --url VALUE (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 66: cliargs - options given no value indicator (an implicit flag, e.g. --quiet) proxies to #flag
+[       OK ] spec\features\option_spec.lua @ 66: cliargs - options given no value indicator (an implicit flag, e.g. --quiet) proxies to #flag (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 81: cliargs - options parsing using a -short key and space as a delimiter works
+[       OK ] spec\features\option_spec.lua @ 81: cliargs - options parsing using a -short key and space as a delimiter works (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 88: cliargs - options parsing using a -short key and = as a delimiter works
+[       OK ] spec\features\option_spec.lua @ 88: cliargs - options parsing using a -short key and = as a delimiter works (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 95: cliargs - options parsing using an --expanded-key and space as a delimiter works
+[       OK ] spec\features\option_spec.lua @ 95: cliargs - options parsing using an --expanded-key and space as a delimiter works (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 102: cliargs - options parsing using an --expanded-key and = as a delimiter works
+[       OK ] spec\features\option_spec.lua @ 102: cliargs - options parsing using an --expanded-key and = as a delimiter works (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 113: cliargs - options parsing for an option with a short key longer than 1 char works
+[       OK ] spec\features\option_spec.lua @ 113: cliargs - options parsing for an option with a short key longer than 1 char works (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 124: cliargs - options parsing given multiple values works
+[       OK ] spec\features\option_spec.lua @ 124: cliargs - options parsing given multiple values works (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 136: cliargs - options parsing given an unknown option bails
+[       OK ] spec\features\option_spec.lua @ 136: cliargs - options parsing given an unknown option bails (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 142: cliargs - options parsing bails if no value was passed
+[       OK ] spec\features\option_spec.lua @ 142: cliargs - options parsing bails if no value was passed (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 149: cliargs - options parsing with a default value accepts a nil
+[       OK ] spec\features\option_spec.lua @ 149: cliargs - options parsing with a default value accepts a nil (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 154: cliargs - options parsing with a default value accepts a string
+[       OK ] spec\features\option_spec.lua @ 154: cliargs - options parsing with a default value accepts a string (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 159: cliargs - options parsing with a default value accepts a number
+[       OK ] spec\features\option_spec.lua @ 159: cliargs - options parsing with a default value accepts a number (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 164: cliargs - options parsing with a default value accepts a boolean
+[       OK ] spec\features\option_spec.lua @ 164: cliargs - options parsing with a default value accepts a boolean (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 169: cliargs - options parsing with a default value accepts an empty table
+[       OK ] spec\features\option_spec.lua @ 169: cliargs - options parsing with a default value accepts an empty table (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 174: cliargs - options parsing with a default value lets me override/reset the default value
+[       OK ] spec\features\option_spec.lua @ 174: cliargs - options parsing with a default value lets me override/reset the default value (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 193: cliargs - options @callback given a single option invokes the callback when the option is parsed
+[       OK ] spec\features\option_spec.lua @ 193: cliargs - options @callback given a single option invokes the callback when the option is parsed (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 201: cliargs - options @callback given a single option invokes the callback with the latest value when the option is a list
+[       OK ] spec\features\option_spec.lua @ 201: cliargs - options @callback given a single option invokes the callback with the latest value when the option is a list (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 217: cliargs - options @callback when the callback returns an error message propagates the error
+[       OK ] spec\features\option_spec.lua @ 217: cliargs - options @callback when the callback returns an error message propagates the error (0.00 ms)
+[ RUN      ] spec\features\option_spec.lua @ 235: cliargs - options @callback given multiple options invokes the callback for each option parsed
+[       OK ] spec\features\option_spec.lua @ 235: cliargs - options @callback given multiple options invokes the callback for each option parsed (0.00 ms)
+[----------] 28 tests from spec\features\option_spec.lua (32.00 ms total)
 
 [----------] Running tests from spec\features\splatarg_spec.lua
-spec\features\splatarg_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\features\splatarg_spec.lua (0.00 ms total)
+[ RUN      ] spec\features\splatarg_spec.lua @ 11: cliargs - splat arguments defining the splat arg works
+[       OK ] spec\features\splatarg_spec.lua @ 11: cliargs - splat arguments defining the splat arg works (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 17: cliargs - splat arguments defining the splat arg requires a key
+[       OK ] spec\features\splatarg_spec.lua @ 17: cliargs - splat arguments defining the splat arg requires a key (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 23: cliargs - splat arguments defining the splat arg requires a description
+[       OK ] spec\features\splatarg_spec.lua @ 23: cliargs - splat arguments defining the splat arg requires a description (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 29: cliargs - splat arguments defining the splat arg rejects multiple definitions
+[       OK ] spec\features\splatarg_spec.lua @ 29: cliargs - splat arguments defining the splat arg rejects multiple definitions (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 39: cliargs - splat arguments default value allows me to define a default value
+[       OK ] spec\features\splatarg_spec.lua @ 39: cliargs - splat arguments default value allows me to define a default value (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 48: cliargs - splat arguments default value when only 1 occurrence is allowed uses the default value when nothing is passed in
+[       OK ] spec\features\splatarg_spec.lua @ 48: cliargs - splat arguments default value when only 1 occurrence is allowed uses the default value when nothing is passed in (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 58: cliargs - splat arguments default value when more than 1 occurrence is allowed uses the default value only once when nothing is passed in
+[       OK ] spec\features\splatarg_spec.lua @ 58: cliargs - splat arguments default value when more than 1 occurrence is allowed uses the default value only once when nothing is passed in (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 62: cliargs - splat arguments default value when more than 1 occurrence is allowed does not use the default value if something was passed in at least once
+[       OK ] spec\features\splatarg_spec.lua @ 62: cliargs - splat arguments default value when more than 1 occurrence is allowed does not use the default value if something was passed in at least once (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 69: cliargs - splat arguments repetition count accepts a repetition count
+[       OK ] spec\features\splatarg_spec.lua @ 69: cliargs - splat arguments repetition count accepts a repetition count (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 75: cliargs - splat arguments repetition count appends the values to a list
+[       OK ] spec\features\splatarg_spec.lua @ 75: cliargs - splat arguments repetition count appends the values to a list (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 84: cliargs - splat arguments repetition count bails if more values were passed than acceptable
+[       OK ] spec\features\splatarg_spec.lua @ 84: cliargs - splat arguments repetition count bails if more values were passed than acceptable (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 93: cliargs - splat arguments given a splatarg as the only argument/option works
+[       OK ] spec\features\splatarg_spec.lua @ 93: cliargs - splat arguments given a splatarg as the only argument/option works (0.00 ms)
+[ RUN      ] spec\features\splatarg_spec.lua @ 104: cliargs - splat arguments @callback invokes the callback every time a value for the splat arg is parsed
+[       OK ] spec\features\splatarg_spec.lua @ 104: cliargs - splat arguments @callback invokes the callback every time a value for the splat arg is parsed (0.00 ms)
+[----------] 13 tests from spec\features\splatarg_spec.lua (15.00 ms total)
 
 [----------] Running tests from spec\file_context_support_spec.lua
 [ RUN      ] spec\file_context_support_spec.lua @ 20: file context before_each after_each egg test 1
@@ -927,7 +1387,7 @@ spec\features\splatarg_spec.lua:1: module 'spec_helper' not found:
 [ RUN      ] spec\file_randomize_spec.lua @ 9: does 100 its
 [       OK ] spec\file_randomize_spec.lua @ 9: does 100 its (0.00 ms)
 [ RUN      ] spec\file_randomize_spec.lua @ 9: does 100 its
-[       OK ] spec\file_randomize_spec.lua @ 9: does 100 its (0.00 ms)
+[       OK ] spec\file_randomize_spec.lua @ 9: does 100 its (16.00 ms)
 [ RUN      ] spec\file_randomize_spec.lua @ 9: does 100 its
 [       OK ] spec\file_randomize_spec.lua @ 9: does 100 its (0.00 ms)
 [ RUN      ] spec\file_randomize_spec.lua @ 9: does 100 its
@@ -1082,7 +1542,7 @@ spec\features\splatarg_spec.lua:1: module 'spec_helper' not found:
 [       OK ] spec\file_randomize_spec.lua @ 9: does 100 its (0.00 ms)
 [ RUN      ] spec\file_randomize_spec.lua @ 9: does 100 its
 [       OK ] spec\file_randomize_spec.lua @ 9: does 100 its (0.00 ms)
-[----------] 100 tests from spec\file_randomize_spec.lua (31.00 ms total)
+[----------] 100 tests from spec\file_randomize_spec.lua (16.00 ms total)
 
 [----------] Running tests from spec\formatters_spec.lua
 [ RUN      ] spec\formatters_spec.lua @ 21: Test Formatters Checks to see if types are returned as strings
@@ -1093,6 +1553,10 @@ Passed in:
 (string) '(number) 2.3456789012000000698e+76'
 Expected:
 (string) '(number) 2.3456789012000001e+076'
+
+stack traceback:
+	spec\formatters_spec.lua:33: in function <spec\formatters_spec.lua:31>
+
 [  FAILED  ] spec\formatters_spec.lua @ 31: Test Formatters Checks to see if numbers are serialized correctly (0.00 ms)
 [ RUN      ] spec\formatters_spec.lua @ 39: Test Formatters Checks to see if tables are recursively serialized
 [       OK ] spec\formatters_spec.lua @ 39: Test Formatters Checks to see if tables are recursively serialized (0.00 ms)
@@ -1116,6 +1580,10 @@ Expected:
   [1] = 1
  [31m*[0m[2] = 2
   [3] = 3 }'
+
+stack traceback:
+	spec\formatters_spec.lua:105: in function <spec\formatters_spec.lua:96>
+
 [  FAILED  ] spec\formatters_spec.lua @ 96: Test Formatters Checks to see if TableErrorHighlightColor changes error color (0.00 ms)
 [ RUN      ] spec\formatters_spec.lua @ 108: Test Formatters Checks to see if self referencing tables can be formatted
 [       OK ] spec\formatters_spec.lua @ 108: Test Formatters Checks to see if self referencing tables can be formatted (0.00 ms)
@@ -1129,13 +1597,13 @@ Expected:
 [       OK ] spec\formatters_spec.lua @ 141: Test Formatters checks arguments not being formatted if set to do so (0.00 ms)
 [ RUN      ] spec\formatters_spec.lua @ 150: Test Formatters checks extra formatters inserted to be called first
 [       OK ] spec\formatters_spec.lua @ 150: Test Formatters checks extra formatters inserted to be called first (0.00 ms)
-[----------] 14 tests from spec\formatters_spec.lua (0.00 ms total)
+[----------] 14 tests from spec\formatters_spec.lua (15.00 ms total)
 
 [----------] Running tests from spec\insulate-expose_spec.lua
 [ RUN      ] spec\insulate-expose_spec.lua @ 9: Tests insulation environment inside insulate updates insuated global table _G
 [       OK ] spec\insulate-expose_spec.lua @ 9: Tests insulation environment inside insulate updates insuated global table _G (0.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 14: Tests insulation environment inside insulate updates package.loaded
-[       OK ] spec\insulate-expose_spec.lua @ 14: Tests insulation environment inside insulate updates package.loaded (16.00 ms)
+[       OK ] spec\insulate-expose_spec.lua @ 14: Tests insulation environment inside insulate updates package.loaded (0.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 23: Tests insulation environment after insulate restores insuated global table _G
 [       OK ] spec\insulate-expose_spec.lua @ 23: Tests insulation environment after insulate restores insuated global table _G (0.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 28: Tests insulation environment after insulate restores package.loaded
@@ -1145,7 +1613,7 @@ Expected:
 [ RUN      ] spec\insulate-expose_spec.lua @ 50:  Tests expose inside insulate block tests environment inside expose block updates global table _G
 [       OK ] spec\insulate-expose_spec.lua @ 50:  Tests expose inside insulate block tests environment inside expose block updates global table _G (0.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 55:  Tests expose inside insulate block tests environment inside expose block updates package.loaded
-[       OK ] spec\insulate-expose_spec.lua @ 55:  Tests expose inside insulate block tests environment inside expose block updates package.loaded (0.00 ms)
+[       OK ] spec\insulate-expose_spec.lua @ 55:  Tests expose inside insulate block tests environment inside expose block updates package.loaded (16.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 65:  Tests expose neutralizes insulation creates exposed global in outer block
 [       OK ] spec\insulate-expose_spec.lua @ 65:  Tests expose neutralizes insulation creates exposed global in outer block (0.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 70:  Tests expose neutralizes insulation does not restore global table _G
@@ -1168,6 +1636,10 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\insulate-expose_spec.lua:132: in function <spec\insulate-expose_spec.lua:130>
+
 [  FAILED  ] spec\insulate-expose_spec.lua @ 130: Tests insulate/expose file insulation works between files (78.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 136: Tests insulate/expose file insulation works between files independent of order
 spec\insulate-expose_spec.lua:138: Expected objects to be the same.
@@ -1175,6 +1647,10 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\insulate-expose_spec.lua:138: in function <spec\insulate-expose_spec.lua:136>
+
 [  FAILED  ] spec\insulate-expose_spec.lua @ 136: Tests insulate/expose file insulation works between files independent of order (78.00 ms)
 [ RUN      ] spec\insulate-expose_spec.lua @ 144: Tests insulate/expose expose from file context works between files
 spec\insulate-expose_spec.lua:146: Expected objects to be the same.
@@ -1182,6 +1658,10 @@ Passed in:
 (boolean) false
 Expected:
 (boolean) true
+
+stack traceback:
+	spec\insulate-expose_spec.lua:146: in function <spec\insulate-expose_spec.lua:144>
+
 [  FAILED  ] spec\insulate-expose_spec.lua @ 144: Tests insulate/expose expose from file context works between files (78.00 ms)
 [----------] 18 tests from spec\insulate-expose_spec.lua (250.00 ms total)
 
@@ -1193,7 +1673,7 @@ Expected:
 [ RUN      ] spec\matchers_spec.lua @ 26: Test Matchers Checks falsy() matcher
 [       OK ] spec\matchers_spec.lua @ 26: Test Matchers Checks falsy() matcher (0.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 36: Test Matchers Checks true() matcher
-[       OK ] spec\matchers_spec.lua @ 36: Test Matchers Checks true() matcher (0.00 ms)
+[       OK ] spec\matchers_spec.lua @ 36: Test Matchers Checks true() matcher (16.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 46: Test Matchers Checks false() matcher
 [       OK ] spec\matchers_spec.lua @ 46: Test Matchers Checks false() matcher (0.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 56: Test Matchers Checks nil() matcher
@@ -1221,7 +1701,7 @@ Expected:
 [ RUN      ] spec\matchers_spec.lua @ 160: Test Matchers Checks same() matcher to handle nils properly
 [       OK ] spec\matchers_spec.lua @ 160: Test Matchers Checks same() matcher to handle nils properly (0.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 167: Test Matchers Checks ref() matcher
-[       OK ] spec\matchers_spec.lua @ 167: Test Matchers Checks ref() matcher (16.00 ms)
+[       OK ] spec\matchers_spec.lua @ 167: Test Matchers Checks ref() matcher (0.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 191: Test Matchers Checks matches() matcher does string matching
 [       OK ] spec\matchers_spec.lua @ 191: Test Matchers Checks matches() matcher does string matching (0.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 204: Test Matchers Checks near() matcher handles tolerances
@@ -1241,12 +1721,12 @@ Expected:
 [ RUN      ] spec\matchers_spec.lua @ 313: Test Matchers Checks returned_with() argument matching for spies
 [       OK ] spec\matchers_spec.lua @ 313: Test Matchers Checks returned_with() argument matching for spies (0.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 324: Test Matchers Checks none() composite matcher
-[       OK ] spec\matchers_spec.lua @ 324: Test Matchers Checks none() composite matcher (0.00 ms)
+[       OK ] spec\matchers_spec.lua @ 324: Test Matchers Checks none() composite matcher (15.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 336: Test Matchers Checks any() composite matcher
 [       OK ] spec\matchers_spec.lua @ 336: Test Matchers Checks any() composite matcher (0.00 ms)
 [ RUN      ] spec\matchers_spec.lua @ 348: Test Matchers Checks all() composite matcher
 [       OK ] spec\matchers_spec.lua @ 348: Test Matchers Checks all() composite matcher (0.00 ms)
-[----------] 30 tests from spec\matchers_spec.lua (16.00 ms total)
+[----------] 30 tests from spec\matchers_spec.lua (31.00 ms total)
 
 [----------] Running tests from spec\mediator_spec.lua
 [ RUN      ] spec\mediator_spec.lua @ 21: mediator can register subscribers
@@ -1301,7 +1781,7 @@ Expected:
 [       OK ] spec\mediator_spec.lua @ 256: mediator can publish a subscriber to all parents at the mediator level (0.00 ms)
 [ RUN      ] spec\mediator_spec.lua @ 281: mediator has predicates
 [       OK ] spec\mediator_spec.lua @ 281: mediator has predicates (0.00 ms)
-[----------] 26 tests from spec\mediator_spec.lua (15.00 ms total)
+[----------] 26 tests from spec\mediator_spec.lua (0.00 ms total)
 
 [----------] Running tests from spec\mocks_spec.lua
 [ RUN      ] spec\mocks_spec.lua @ 12: Tests dealing with mocks makes sure we're returning the same table
@@ -1309,22 +1789,31 @@ Expected:
 [ RUN      ] spec\mocks_spec.lua @ 18: Tests dealing with mocks makes sure function calls are spies
 [       OK ] spec\mocks_spec.lua @ 18: Tests dealing with mocks makes sure function calls are spies (0.00 ms)
 [ RUN      ] spec\mocks_spec.lua @ 25: Tests dealing with mocks makes sure function calls are stubs when specified
-[       OK ] spec\mocks_spec.lua @ 25: Tests dealing with mocks makes sure function calls are stubs when specified (0.00 ms)
+[       OK ] spec\mocks_spec.lua @ 25: Tests dealing with mocks makes sure function calls are stubs when specified (16.00 ms)
 [ RUN      ] spec\mocks_spec.lua @ 32: Tests dealing with mocks makes sure call history can be cleared
-[       OK ] spec\mocks_spec.lua @ 32: Tests dealing with mocks makes sure call history can be cleared (16.00 ms)
+[       OK ] spec\mocks_spec.lua @ 32: Tests dealing with mocks makes sure call history can be cleared (0.00 ms)
 [ RUN      ] spec\mocks_spec.lua @ 46: Tests dealing with mocks makes sure table can be reverted to pre-mock state
 [       OK ] spec\mocks_spec.lua @ 46: Tests dealing with mocks makes sure table can be reverted to pre-mock state (0.00 ms)
 [----------] 5 tests from spec\mocks_spec.lua (16.00 ms total)
 
 [----------] Running tests from spec\modules\cli_spec.lua
 [ RUN      ] spec\modules\cli_spec.lua @ 5: Tests command-line interface default options
-[       OK ] spec\modules\cli_spec.lua @ 5: Tests command-line interface default options (0.00 ms)
+spec\modules\cli_spec.lua:20: Expected objects to be equal.
+Passed in:
+(string) 'spec/?.lua;spec/?.lua;.\?.lua;C:\Lua\5.1\lua\?.lua;C:\Lua\5.1\lua\?\init.lua;C:\Lua\5.1\?.lua;C:\Lua\5.1\?\init.lua;.\?.lua;C:\Lua\5.1\lua\?.lua;C:\Lua\5.1\lua\?\init.lua;C:\Lua\5.1\?.lua;C:\Lua\5.1\?\init.lua'
+Expected:
+(string) './src/?.lua;./src/?/?.lua;./src/?/init.lua'
+
+stack traceback:
+	spec\modules\cli_spec.lua:20: in function <spec\modules\cli_spec.lua:5>
+
+[  FAILED  ] spec\modules\cli_spec.lua @ 5: Tests command-line interface default options (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 64: Tests command-line interface standalone options disables ROOT and --pattern
 [       OK ] spec\modules\cli_spec.lua @ 64: Tests command-line interface standalone options disables ROOT and --pattern (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 73: Tests command-line interface specify flags
-[       OK ] spec\modules\cli_spec.lua @ 73: Tests command-line interface specify flags (15.00 ms)
+[       OK ] spec\modules\cli_spec.lua @ 73: Tests command-line interface specify flags (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 84: Tests command-line interface specify more flags
-[       OK ] spec\modules\cli_spec.lua @ 84: Tests command-line interface specify more flags (0.00 ms)
+[       OK ] spec\modules\cli_spec.lua @ 84: Tests command-line interface specify more flags (15.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 95: Tests command-line interface specify even more flags
 [       OK ] spec\modules\cli_spec.lua @ 95: Tests command-line interface specify even more flags (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 106: Tests command-line interface specify no-flags
@@ -1364,9 +1853,14 @@ Expected:
 [ RUN      ] spec\modules\cli_spec.lua @ 238: Tests command-line interface specify --directory multiple times with multiple roots
 [       OK ] spec\modules\cli_spec.lua @ 238: Tests command-line interface specify --directory multiple times with multiple roots (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 245: Tests command-line interface specify --run
-[       OK ] spec\modules\cli_spec.lua @ 245: Tests command-line interface specify --run (0.00 ms)
+spec\modules\cli_spec.lua:248: attempt to index local 'args' (a nil value)
+
+stack traceback:
+	spec\modules\cli_spec.lua:248: in function <spec\modules\cli_spec.lua:245>
+
+[  ERROR   ] spec\modules\cli_spec.lua @ 245: Tests command-line interface specify --run (16.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 252: Tests command-line interface specify --lang
-[       OK ] spec\modules\cli_spec.lua @ 252: Tests command-line interface specify --lang (16.00 ms)
+[       OK ] spec\modules\cli_spec.lua @ 252: Tests command-line interface specify --lang (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 258: Tests command-line interface specify --repeat
 [       OK ] spec\modules\cli_spec.lua @ 258: Tests command-line interface specify --repeat (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 264: Tests command-line interface specify output library
@@ -1378,7 +1872,7 @@ Expected:
 [ RUN      ] spec\modules\cli_spec.lua @ 287: Tests command-line interface specify --filter and --filter-out
 [       OK ] spec\modules\cli_spec.lua @ 287: Tests command-line interface specify --filter and --filter-out (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 294: Tests command-line interface specify --filter and --filter-out multiple times
-[       OK ] spec\modules\cli_spec.lua @ 294: Tests command-line interface specify --filter and --filter-out multiple times (0.00 ms)
+[       OK ] spec\modules\cli_spec.lua @ 294: Tests command-line interface specify --filter and --filter-out multiple times (15.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 301: Tests command-line interface specify --loaders
 [       OK ] spec\modules\cli_spec.lua @ 301: Tests command-line interface specify --loaders (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 307: Tests command-line interface specify --lpath
@@ -1388,11 +1882,11 @@ Expected:
 [ RUN      ] spec\modules\cli_spec.lua @ 321: Tests command-line interface specify -e statement
 [       OK ] spec\modules\cli_spec.lua @ 321: Tests command-line interface specify -e statement (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 329: Tests using .busted tasks default options
-[       OK ] spec\modules\cli_spec.lua @ 329: Tests using .busted tasks default options (15.00 ms)
+[       OK ] spec\modules\cli_spec.lua @ 329: Tests using .busted tasks default options (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 388: Tests using .busted tasks default options with --config-file option
 [       OK ] spec\modules\cli_spec.lua @ 388: Tests using .busted tasks default options with --config-file option (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 446: Tests using .busted tasks load configuration options
-[       OK ] spec\modules\cli_spec.lua @ 446: Tests using .busted tasks load configuration options (0.00 ms)
+[       OK ] spec\modules\cli_spec.lua @ 446: Tests using .busted tasks load configuration options (16.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 461: Tests using .busted tasks load configuration options and override with command-line
 [       OK ] spec\modules\cli_spec.lua @ 461: Tests using .busted tasks load configuration options and override with command-line (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 475: Tests using .busted tasks detects error in configuration file
@@ -1402,7 +1896,7 @@ Expected:
 [ RUN      ] spec\modules\cli_spec.lua @ 493: Tests using .busted tasks detects unknown/invalid task
 [       OK ] spec\modules\cli_spec.lua @ 493: Tests using .busted tasks detects unknown/invalid task (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 507: Tests command-line parse errors with invalid --repeat value
-[       OK ] spec\modules\cli_spec.lua @ 507: Tests command-line parse errors with invalid --repeat value (16.00 ms)
+[       OK ] spec\modules\cli_spec.lua @ 507: Tests command-line parse errors with invalid --repeat value (0.00 ms)
 [ RUN      ] spec\modules\cli_spec.lua @ 515: Tests command-line parse errors with same tag for --tags and --exclude-tags
 [       OK ] spec\modules\cli_spec.lua @ 515: Tests command-line parse errors with same tag for --tags and --exclude-tags (0.00 ms)
 [----------] 44 tests from spec\modules\cli_spec.lua (78.00 ms total)
@@ -1430,7 +1924,7 @@ Expected:
 [----------] 0 tests from spec\modules\file_loader_spec.lua (0.00 ms total)
 
 [----------] Running tests from spec\modules\luacov_spec.lua
-[----------] 0 tests from spec\modules\luacov_spec.lua (0.00 ms total)
+[----------] 0 tests from spec\modules\luacov_spec.lua (15.00 ms total)
 
 [----------] Running tests from spec\modules\output_handler_loader_spec.lua
 [----------] 0 tests from spec\modules\output_handler_loader_spec.lua (0.00 ms total)
@@ -1477,13 +1971,13 @@ Expected:
 [ RUN      ] spec\output_spec.lua @ 237: Output testing using custom failure message Should use failure message for is_unique assertion: shallow compare
 [       OK ] spec\output_spec.lua @ 237: Output testing using custom failure message Should use failure message for is_unique assertion: shallow compare (0.00 ms)
 [ RUN      ] spec\output_spec.lua @ 244: Output testing using custom failure message Should use failure message for is_unique assertion: nil deep compare
-[       OK ] spec\output_spec.lua @ 244: Output testing using custom failure message Should use failure message for is_unique assertion: nil deep compare (0.00 ms)
+[       OK ] spec\output_spec.lua @ 244: Output testing using custom failure message Should use failure message for is_unique assertion: nil deep compare (16.00 ms)
 [ RUN      ] spec\output_spec.lua @ 251: Output testing using custom failure message Should use failure message for is_unique assertion: deep compare
 [       OK ] spec\output_spec.lua @ 251: Output testing using custom failure message Should use failure message for is_unique assertion: deep compare (0.00 ms)
 [ RUN      ] spec\output_spec.lua @ 258: Output testing using custom failure message Should use failure message for is_unique assertion: deep compare 2
 [       OK ] spec\output_spec.lua @ 258: Output testing using custom failure message Should use failure message for is_unique assertion: deep compare 2 (0.00 ms)
 [ RUN      ] spec\output_spec.lua @ 265: Output testing using custom failure message Should use failure message for is_near assertion
-[       OK ] spec\output_spec.lua @ 265: Output testing using custom failure message Should use failure message for is_near assertion (16.00 ms)
+[       OK ] spec\output_spec.lua @ 265: Output testing using custom failure message Should use failure message for is_near assertion (0.00 ms)
 [ RUN      ] spec\output_spec.lua @ 272: Output testing using custom failure message Should use failure message for matches assertion
 [       OK ] spec\output_spec.lua @ 272: Output testing using custom failure message Should use failure message for matches assertion (0.00 ms)
 [ RUN      ] spec\output_spec.lua @ 282: Output testing using custom failure message Should use failure message for has_error assertion
@@ -1534,25 +2028,62 @@ Expected:
 [       OK ] spec\output_spec.lua @ 416: Output testing stub using custom failure message Should use failure message for stub returned_with assertion (0.00 ms)
 [ RUN      ] spec\output_spec.lua @ 424: Output testing stub using custom failure message Should convert objects to string
 [       OK ] spec\output_spec.lua @ 424: Output testing stub using custom failure message Should convert objects to string (0.00 ms)
-[----------] 49 tests from spec\output_spec.lua (47.00 ms total)
+[----------] 49 tests from spec\output_spec.lua (32.00 ms total)
 
 [----------] Running tests from spec\printer_spec.lua
-spec\printer_spec.lua:1: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\printer_spec.lua (0.00 ms total)
+[ RUN      ] spec\printer_spec.lua @ 18: printer #generate_usage works with 0 arguments
+[       OK ] spec\printer_spec.lua @ 18: printer #generate_usage works with 0 arguments (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 22: printer #generate_usage works with 1 argument
+[       OK ] spec\printer_spec.lua @ 22: printer #generate_usage works with 1 argument (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 30: printer #generate_usage works with 2+ arguments
+[       OK ] spec\printer_spec.lua @ 30: printer #generate_usage works with 2+ arguments (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 39: printer #generate_usage prints the app name
+[       OK ] spec\printer_spec.lua @ 39: printer #generate_usage prints the app name (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 44: printer #generate_usage prints options
+[       OK ] spec\printer_spec.lua @ 44: printer #generate_usage prints options (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 52: printer #generate_usage prints flags
+[       OK ] spec\printer_spec.lua @ 52: printer #generate_usage prints flags (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 60: printer #generate_usage prints a splat arg with reptitions == 1
+[       OK ] spec\printer_spec.lua @ 60: printer #generate_usage prints a splat arg with reptitions == 1 (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 68: printer #generate_usage prints a splat arg with reptitions == 2
+[       OK ] spec\printer_spec.lua @ 68: printer #generate_usage prints a splat arg with reptitions == 2 (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 76: printer #generate_usage prints a splat arg with reptitions > 2
+[       OK ] spec\printer_spec.lua @ 76: printer #generate_usage prints a splat arg with reptitions > 2 (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 92: printer #generate_help works with nothing
+[       OK ] spec\printer_spec.lua @ 92: printer #generate_help works with nothing (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 96: printer #generate_help works with 1 argument
+[       OK ] spec\printer_spec.lua @ 96: printer #generate_help works with 1 argument (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 105: printer #generate_help works with 2+ arguments
+[       OK ] spec\printer_spec.lua @ 105: printer #generate_help works with 2+ arguments (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 116: printer #generate_help works with 1 option
+[       OK ] spec\printer_spec.lua @ 116: printer #generate_help works with 1 option (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 125: printer #generate_help prints an option's default value
+[       OK ] spec\printer_spec.lua @ 125: printer #generate_help prints an option's default value (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 134: printer #generate_help prints a repeatable option
+[       OK ] spec\printer_spec.lua @ 134: printer #generate_help prints a repeatable option (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 143: printer #generate_help works with many options
+[       OK ] spec\printer_spec.lua @ 143: printer #generate_help works with many options (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 155: printer #generate_help given a flag prints it under OPTIONS
+[       OK ] spec\printer_spec.lua @ 155: printer #generate_help given a flag prints it under OPTIONS (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 166: printer #generate_help given a flag with a default value but is not negatable does not print "on" or "off"
+[       OK ] spec\printer_spec.lua @ 166: printer #generate_help given a flag with a default value but is not negatable does not print "on" or "off" (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 177: printer #generate_help given a negatable flag prints it along with its default value
+[       OK ] spec\printer_spec.lua @ 177: printer #generate_help given a negatable flag prints it along with its default value (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 190: printer #generate_help given a splat arg prints it with a repetition of 1
+[       OK ] spec\printer_spec.lua @ 190: printer #generate_help given a splat arg prints it with a repetition of 1 (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 198: printer #generate_help given a splat arg prints it with a repetition of > 1
+[       OK ] spec\printer_spec.lua @ 198: printer #generate_help given a splat arg prints it with a repetition of > 1 (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 206: printer #generate_help given a splat arg prints it without a default value
+[       OK ] spec\printer_spec.lua @ 206: printer #generate_help given a splat arg prints it without a default value (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 214: printer #generate_help given a splat arg prints it with a default value
+[       OK ] spec\printer_spec.lua @ 214: printer #generate_help given a splat arg prints it with a default value (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 236: printer #dump_internal_state works
+[       OK ] spec\printer_spec.lua @ 236: printer #dump_internal_state works (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 263: printer #dump_internal_state does not fail with an optarg of 1 reptitions
+[       OK ] spec\printer_spec.lua @ 263: printer #dump_internal_state does not fail with an optarg of 1 reptitions (0.00 ms)
+[ RUN      ] spec\printer_spec.lua @ 268: printer #dump_internal_state does not fail with an optarg of many reptitions
+[       OK ] spec\printer_spec.lua @ 268: printer #dump_internal_state does not fail with an optarg of many reptitions (0.00 ms)
+[----------] 26 tests from spec\printer_spec.lua (31.00 ms total)
 
 [----------] Running tests from spec\randomize_spec.lua
 [ RUN      ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its
@@ -1670,7 +2201,7 @@ spec\printer_spec.lua:1: module 'spec_helper' not found:
 [ RUN      ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its
 [       OK ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its (0.00 ms)
 [ RUN      ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its
-[       OK ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its (0.00 ms)
+[       OK ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its (16.00 ms)
 [ RUN      ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its
 [       OK ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its (0.00 ms)
 [ RUN      ] spec\randomize_spec.lua @ 12: Randomizing test order does 100 its
@@ -2180,7 +2711,7 @@ spec\printer_spec.lua:1: module 'spec_helper' not found:
 [ RUN      ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its
 [       OK ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its (0.00 ms)
 [ RUN      ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its
-[       OK ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its (16.00 ms)
+[       OK ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its (0.00 ms)
 [ RUN      ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its
 [       OK ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its (0.00 ms)
 [ RUN      ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its
@@ -2205,14 +2736,17 @@ spec\printer_spec.lua:1: module 'spec_helper' not found:
 [       OK ] spec\randomize_spec.lua @ 95: Disabling randomized test order with randomize(nil) does 100 its (0.00 ms)
 [ RUN      ] spec\randomize_spec.lua @ 100: Disabling randomized test order with randomize(nil) does not randomize tests
 [       OK ] spec\randomize_spec.lua @ 100: Disabling randomized test order with randomize(nil) does not randomize tests (0.00 ms)
-[----------] 325 tests from spec\randomize_spec.lua (109.00 ms total)
+[----------] 325 tests from spec\randomize_spec.lua (93.00 ms total)
 
 [----------] Running tests from spec\say_spec.lua
 spec\say_spec.lua:6: module 'init' not found:
 	no field package.preload['init']
-	no file './src/init.lua'
-	no file './src/init/init.lua'
-	no file './src/init/init.lua'
+	no file 'spec/init.lua'
+	no file '.\init.lua'
+	no file 'C:\Lua\5.1\lua\init.lua'
+	no file 'C:\Lua\5.1\lua\init\init.lua'
+	no file 'C:\Lua\5.1\init.lua'
+	no file 'C:\Lua\5.1\init\init.lua'
 	no file '.\init.lua'
 	no file 'C:\Lua\5.1\lua\init.lua'
 	no file 'C:\Lua\5.1\lua\init\init.lua'
@@ -2223,6 +2757,10 @@ spec\say_spec.lua:6: module 'init' not found:
 	no file '.\init.dll'
 	no file 'C:\Lua\5.1\init.dll'
 	no file 'C:\Lua\5.1\loadall.dll'
+
+stack traceback:
+	spec\say_spec.lua:6: in function <spec\say_spec.lua:4>
+
 [----------] 0 tests from spec\say_spec.lua (0.00 ms total)
 
 [----------] Running tests from spec\spies_spec.lua
@@ -2237,7 +2775,7 @@ spec\say_spec.lua:6: module 'init' not found:
 [ RUN      ] spec\spies_spec.lua @ 40: Tests dealing with spies checks returned_with() assertions
 [       OK ] spec\spies_spec.lua @ 40: Tests dealing with spies checks returned_with() assertions (0.00 ms)
 [ RUN      ] spec\spies_spec.lua @ 60: Tests dealing with spies checks called() and called_with() assertions
-[       OK ] spec\spies_spec.lua @ 60: Tests dealing with spies checks called() and called_with() assertions (0.00 ms)
+[       OK ] spec\spies_spec.lua @ 60: Tests dealing with spies checks called() and called_with() assertions (16.00 ms)
 [ RUN      ] spec\spies_spec.lua @ 83: Tests dealing with spies checks called() and called_with() assertions using refs
 [       OK ] spec\spies_spec.lua @ 83: Tests dealing with spies checks called() and called_with() assertions using refs (0.00 ms)
 [ RUN      ] spec\spies_spec.lua @ 96: Tests dealing with spies checks called_with(aspy) assertions
@@ -2262,7 +2800,7 @@ spec\say_spec.lua:6: module 'init' not found:
 [       OK ] spec\spies_spec.lua @ 203: Tests dealing with spies checks clearing a spy.on call history (0.00 ms)
 [ RUN      ] spec\spies_spec.lua @ 211: Tests dealing with spies checks clearing a spy.new call history
 [       OK ] spec\spies_spec.lua @ 211: Tests dealing with spies checks clearing a spy.new call history (0.00 ms)
-[----------] 18 tests from spec\spies_spec.lua (15.00 ms total)
+[----------] 18 tests from spec\spies_spec.lua (16.00 ms total)
 
 [----------] Running tests from spec\state_spec.lua
 [ RUN      ] spec\state_spec.lua @ 3: Tests states of the assert engine checks levels created/reverted
@@ -2316,7 +2854,7 @@ spec\say_spec.lua:6: module 'init' not found:
 [ RUN      ] spec\stub_spec.lua @ 189: Tests dealing with stubs returns stub arguments by default
 [       OK ] spec\stub_spec.lua @ 189: Tests dealing with stubs returns stub arguments by default (0.00 ms)
 [ RUN      ] spec\stub_spec.lua @ 198: Tests dealing with stubs invokes stub function by default
-[       OK ] spec\stub_spec.lua @ 198: Tests dealing with stubs invokes stub function by default (16.00 ms)
+[       OK ] spec\stub_spec.lua @ 198: Tests dealing with stubs invokes stub function by default (0.00 ms)
 [ RUN      ] spec\stub_spec.lua @ 209: Tests dealing with stubs on_call_with returns specified arguments
 [       OK ] spec\stub_spec.lua @ 209: Tests dealing with stubs on_call_with returns specified arguments (0.00 ms)
 [ RUN      ] spec\stub_spec.lua @ 229: Tests dealing with stubs on_call_with invokes stub function
@@ -2657,286 +3195,6 @@ spec\say_spec.lua:6: module 'init' not found:
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (16.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (16.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
@@ -3105,9 +3363,7 @@ spec\say_spec.lua:6: module 'init' not found:
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (46.00 ms)
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (15.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
@@ -3165,7 +3421,169 @@ spec\say_spec.lua:6: module 'init' not found:
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (16.00 ms)
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
@@ -4251,7 +4669,83 @@ spec\say_spec.lua:6: module 'init' not found:
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
-[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (16.00 ms)
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
@@ -4330,7 +4824,51 @@ spec\say_spec.lua:6: module 'init' not found:
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
 [ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
 [       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
-[----------] 1000 tests from spec\test_runner\interface_spec.lua (359.00 ms total)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[ RUN      ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its
+[       OK ] spec\test_runner\interface_spec.lua @ 3: does a describe does 1000 its (0.00 ms)
+[----------] 1000 tests from spec\test_runner\interface_spec.lua (327.00 ms total)
 
 [----------] Running tests from spec\time_spec.lua
 [ RUN      ] spec\time_spec.lua @ 4: Test time functions gettime returns current time
@@ -4342,22 +4880,31 @@ spec\say_spec.lua:6: module 'init' not found:
 [----------] 3 tests from spec\time_spec.lua (499.00 ms total)
 
 [----------] Running tests from spec\utils\disect_argument_spec.lua
-spec\utils\disect_argument_spec.lua:3: module 'spec_helper' not found:
-	no field package.preload['spec_helper']
-	no file './src/spec_helper.lua'
-	no file './src/spec_helper/spec_helper.lua'
-	no file './src/spec_helper/init.lua'
-	no file '.\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper.lua'
-	no file 'C:\Lua\5.1\lua\spec_helper\init.lua'
-	no file 'C:\Lua\5.1\spec_helper.lua'
-	no file 'C:\Lua\5.1\spec_helper\init.lua'
-	no file './csrc/spec_helper.dll'
-	no file './csrc/spec_helper/spec_helper.dll'
-	no file '.\spec_helper.dll'
-	no file 'C:\Lua\5.1\spec_helper.dll'
-	no file 'C:\Lua\5.1\loadall.dll'
-[----------] 0 tests from spec\utils\disect_argument_spec.lua (0.00 ms total)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with ''
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '-q'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '-q' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--quiet'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--quiet' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--no-quiet'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--no-quiet' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--no-q'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--no-q' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '-v=VALUE'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '-v=VALUE' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--value=VALUE'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--value=VALUE' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--value=with whitespace'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--value=with whitespace' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '--' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with 'value'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with 'value' (16.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '/path/to/something'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with '/path/to/something' (0.00 ms)
+[ RUN      ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with 'oops-look-at--me'
+[       OK ] spec\utils\disect_argument_spec.lua @ 7: utils::disect_argument works with 'oops-look-at--me' (0.00 ms)
+[----------] 12 tests from spec\utils\disect_argument_spec.lua (16.00 ms total)
 
 [----------] Running tests from spec\utils\disect_spec.lua
 [ RUN      ] spec\utils\disect_spec.lua @ 5: utils::disect works with '-q'
@@ -4375,7 +4922,7 @@ spec\utils\disect_argument_spec.lua:3: module 'spec_helper' not found:
 [ RUN      ] spec\utils\disect_spec.lua @ 5: utils::disect works with '--value VALUE'
 [       OK ] spec\utils\disect_spec.lua @ 5: utils::disect works with '--value VALUE' (0.00 ms)
 [ RUN      ] spec\utils\disect_spec.lua @ 5: utils::disect works with '--value=VALUE'
-[       OK ] spec\utils\disect_spec.lua @ 5: utils::disect works with '--value=VALUE' (16.00 ms)
+[       OK ] spec\utils\disect_spec.lua @ 5: utils::disect works with '--value=VALUE' (0.00 ms)
 [ RUN      ] spec\utils\disect_spec.lua @ 5: utils::disect works with '-v --value=VALUE'
 [       OK ] spec\utils\disect_spec.lua @ 5: utils::disect works with '-v --value=VALUE' (0.00 ms)
 [ RUN      ] spec\utils\disect_spec.lua @ 5: utils::disect works with '-v --value VALUE'
@@ -4384,7 +4931,7 @@ spec\utils\disect_argument_spec.lua:3: module 'spec_helper' not found:
 [       OK ] spec\utils\disect_spec.lua @ 5: utils::disect works with '-v, --value=VALUE' (0.00 ms)
 [ RUN      ] spec\utils\disect_spec.lua @ 5: utils::disect works with '-v, --value VALUE'
 [       OK ] spec\utils\disect_spec.lua @ 5: utils::disect works with '-v, --value VALUE' (0.00 ms)
-[----------] 12 tests from spec\utils\disect_spec.lua (16.00 ms total)
+[----------] 12 tests from spec\utils\disect_spec.lua (0.00 ms total)
 
 [----------] Running tests from spec\utils\split_spec.lua
 [ RUN      ] spec\utils\split_spec.lua @ 4: utils::split should work
@@ -4397,14 +4944,14 @@ spec\utils\disect_argument_spec.lua:3: module 'spec_helper' not found:
 [----------] 1 test from spec\utils\wordwrap_spec.lua (0.00 ms total)
 
 [----------] Global test environment teardown.
-[==========] 1856 tests from 41 test files ran. (9173.00 ms total)
-[  PASSED  ] 1773 tests.
+[==========] 2003 tests from 41 test files ran. (9438.00 ms total)
+[  PASSED  ] 1916 tests.
 [ SKIPPED  ] 4 tests, listed below:
 [ SKIPPED  ] spec\async_spec.lua @ 1: testing the done callback with tokens
 [ SKIPPED  ] spec\async_spec.lua @ 52: testing done callbacks being provided for async tests
 [ SKIPPED  ] spec\cl_spec.lua @ 478: Tests error messages through the command line when __gc metamethod throws error
 [ SKIPPED  ] spec\cl_spec.lua @ 500: Tests moonscript error messages through the command line
-[  FAILED  ] 77 tests, listed below:
+[  FAILED  ] 78 tests, listed below:
 [  FAILED  ] spec\cl_spec.lua @ 40: Tests the busted command-line options tests running with --tags specified
 [  FAILED  ] spec\cl_spec.lua @ 55: Tests the busted command-line options tests running with --exclude-tags specified
 [  FAILED  ] spec\cl_spec.lua @ 74: Tests the busted command-line options tests running with --tags specified in describe
@@ -4482,21 +5029,15 @@ spec\utils\disect_argument_spec.lua:3: module 'spec_helper' not found:
 [  FAILED  ] spec\insulate-expose_spec.lua @ 130: Tests insulate/expose file insulation works between files
 [  FAILED  ] spec\insulate-expose_spec.lua @ 136: Tests insulate/expose file insulation works between files independent of order
 [  FAILED  ] spec\insulate-expose_spec.lua @ 144: Tests insulate/expose expose from file context works between files
-[  ERROR   ] 13 errors, listed below:
+[  FAILED  ] spec\modules\cli_spec.lua @ 5: Tests command-line interface default options
+[  ERROR   ] 6 errors, listed below:
 [  ERROR   ] spec\cl_spec.lua @ 544: Tests pending through the commandline detects tests as pending
 [  ERROR   ] spec\cl_spec.lua @ 553: Tests pending through the commandline --suppress-pending option is honored
-[  ERROR   ] spec\cliargs_spec.lua @ 1: suite spec\cliargs_spec.lua
-[  ERROR   ] spec\config_loader_spec.lua @ 1: suite spec\config_loader_spec.lua
-[  ERROR   ] spec\core_spec.lua @ 1: suite spec\core_spec.lua
-[  ERROR   ] spec\features\argument_spec.lua @ 1: suite spec\features\argument_spec.lua
-[  ERROR   ] spec\features\flag_spec.lua @ 1: suite spec\features\flag_spec.lua
-[  ERROR   ] spec\features\integration_spec.lua @ 1: suite spec\features\integration_spec.lua
-[  ERROR   ] spec\features\option_spec.lua @ 1: suite spec\features\option_spec.lua
-[  ERROR   ] spec\features\splatarg_spec.lua @ 1: suite spec\features\splatarg_spec.lua
-[  ERROR   ] spec\printer_spec.lua @ 1: suite spec\printer_spec.lua
+[  ERROR   ] spec\config_loader_spec.lua @ 36: cliargs.config_loader #from_ini works
+[  ERROR   ] spec\config_loader_spec.lua @ 42: cliargs.config_loader #from_yaml works
+[  ERROR   ] spec\modules\cli_spec.lua @ 245: Tests command-line interface specify --run
 [  ERROR   ] spec\say_spec.lua @ 4: Tests to make sure the say library is functional setup
-[  ERROR   ] spec\utils\disect_argument_spec.lua @ 3: suite spec\utils\disect_argument_spec.lua
 
  4 SKIPPED TESTS
- 77 FAILED TESTS
- 13 ERRORS
+ 78 FAILED TESTS
+ 6 ERRORS
