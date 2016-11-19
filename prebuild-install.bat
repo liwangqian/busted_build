@@ -15,7 +15,10 @@ copy %~dp0.luacov %INSTALL_ROOT%
 
 call setup_env.bat
 
-echo lua %INSTALL_ROOT%\5.1\lua\bin\busted %%* > %INSTALL_ROOT%\5.1\lua\bin\busted.bat
-echo lua %INSTALL_ROOT%\5.1\lua\bin\luacov %%* > %INSTALL_ROOT%\5.1\lua\bin\luacov.bat
+echo @echo off > %INSTALL_ROOT%\5.1\lua\bin\busted.bat
+echo lua %INSTALL_ROOT%\5.1\lua\bin\busted %%* >> %INSTALL_ROOT%\5.1\lua\bin\busted.bat
+
+echo @echo off > %INSTALL_ROOT%\5.1\lua\bin\luacov.bat
+echo lua %INSTALL_ROOT%\5.1\lua\bin\luacov %%* >> %INSTALL_ROOT%\5.1\lua\bin\luacov.bat
 
 pause
