@@ -13,7 +13,7 @@ end
 --[[
 	向mod模块中增加动态绑定功能
 --]]
-local function add_dynamic_binding(mod, module_name)
+function add_dynamic_binding(mod, module_name)
 	setmetatable(mod, 
 	{
 		__index = function ( self, name )
@@ -42,7 +42,7 @@ local function add_dynamic_binding(mod, module_name)
 	})
 end
 
-local function get_global_env( name )
+function get_global_env( name )
 	if name then
 		return global_env[name]
 	else
@@ -75,7 +75,5 @@ local function safe_require( ... )
 end
 
 -- 将接口导出到公共环境变量中，方便使用
-export_api(add_dynamic_binding, 'add_dynamic_binding')
-export_api(get_global_env, 'get_global_env')
 export_api(external_module, 'external_module')
 export_api(safe_require, 'safe_require')
