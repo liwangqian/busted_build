@@ -2,15 +2,12 @@ module ("utility", package.seeall)
 local global_env = _G
 
 function export_module(mod, module_name)
-	local glob = global_env
-	glob[module_name] = mod
+	global_env[module_name] = mod
 	package.loaded[module_name] = mod
 end
 
 function export_api(callable, name)
-	local glob = global_env
-	
-	glob[name] = callable
+	global_env[name] = callable
 end
 
 --[[
