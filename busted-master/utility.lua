@@ -63,7 +63,6 @@ local function external_module( name )
 	return ext_mod
 end
 
--- 定义成模块局部变量，防止多次require本模块时，被多次赋值导致混乱了
 local orig_require = global_env['require']
 local function safe_require( ... )
 	local ret, mod = pcall(orig_require, ...)
