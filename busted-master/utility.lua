@@ -43,7 +43,7 @@ function add_dynamic_binding(mod, module_name)
 end
 
 function get_global_env( name )
-	if name then
+	if name and rawget(global_env, name) then
 		return global_env[name]
 	else
 		return global_env
@@ -51,12 +51,13 @@ function get_global_env( name )
 end
 
 local function external_module( name )
-	if global_env[name] then
-		assert(type(global_env[name]) == 'table', string.format("module %s conflicted with existing one", name))
-		return global_env[name]
+	local ext_mod = rawget(global_env, name)
+	if ext_mod then
+		assert(type(ext_mod) == 'table', string.format("module %s conflicted with existing one", name))
+		return ext_mod
 	end
 
-	local ext_mod = {}
+	ext_mod = {}
 	add_dynamic_binding(ext_mod, name)
 	export_module(ext_mod, name)
 
