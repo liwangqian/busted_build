@@ -77,3 +77,47 @@ end
 -- 将接口导出到公共环境变量中，方便使用
 export_api(external_module, 'external_module')
 export_api(safe_require, 'safe_require')
+
+
+local function gen_guid( obj)
+	local id
+	local found = false
+
+	for i = 1, 10 do
+		id = math.random(obj.minval, obj.maxval)
+		for bias = 0, 100 do
+			id = id + bias
+			if not rawget(obj.ids, id) then
+				obj.ids[id] = true
+				found = true
+				break
+			end
+		end
+	end
+
+	if not found then
+		error('Unable to generate unity id', 3)
+	end
+
+	return id
+end
+
+local guid = {}
+guid.new = function ( self, minval, maxval )
+	local newObj = {}
+
+	newObj.ids    = {}
+	newObj.minval = minval or 1
+	newObj.maxval = maxval or 2147483647
+	newObj.gen    = function ( self )
+		return gen_guid(self)
+	end
+
+	newObj.reset  = function ( self )
+		newObj.ids = {}
+	end
+
+	return newObj
+end
+
+export_module(guid, 'guid')
